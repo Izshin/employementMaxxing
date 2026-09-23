@@ -546,15 +546,6 @@ async function saveToDisk(filename, text) {
   return true;
 }
 
-$('#btn-export').addEventListener('click', () => {
-  const blob = new Blob([JSON.stringify(state, null, 2)], { type: 'application/json' });
-  const a = document.createElement('a');
-  a.href = URL.createObjectURL(blob);
-  a.download = 'ofertas.json';
-  a.click();
-  URL.revokeObjectURL(a.href);
-});
-
 $('#btn-import').addEventListener('click', () => $('#file-import').click());
 
 $('#file-import').addEventListener('change', async (ev) => {
@@ -575,14 +566,6 @@ $('#file-import').addEventListener('change', async (ev) => {
     alert('No se pudo importar el archivo: ' + e.message);
   }
   ev.target.value = '';
-});
-
-$('#btn-reset').addEventListener('click', () => {
-  if (!confirm('Se descartarán tus cambios y se volverá a los datos de ejemplo. ¿Seguir?')) return;
-  state = { offers: JSON.parse(JSON.stringify(DEFAULT_OFFERS)) };
-  saveState();
-  showList();
-  toast('Datos restaurados');
 });
 
 $('#btn-save-all').addEventListener('click', async () => {

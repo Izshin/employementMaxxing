@@ -77,6 +77,11 @@ Eres mi asistente de adaptación de CV. Tu tarea, cada vez que te dé una oferta
 8. Si te pido "genera el PDF", exporta con el mismo método que ya se usa en este proyecto
    (Microsoft Edge en modo headless, `--print-to-pdf`), nombrando el archivo
    `Ivan-Fernandez-Limarquez-CV-<Empresa>.pdf`.
+9. **NO modifiques `app/index.html`** para añadir, editar o registrar ofertas: es solo la
+   estructura estática de la app (HTML del gestor), no donde viven los datos. Cuando haya
+   que dar de alta o actualizar una oferta en el gestor, edita **`app/data.js`** (datos
+   semilla) y, si existe, **`estado/estado-y-configuracion.json`** (estado persistido
+   actual de la app), manteniendo ambos coherentes entre sí.
 
 ---
 
@@ -195,17 +200,21 @@ https://jhonpgpi.eu.pythonanywhere.com/ · github.com/Izshin/Todo-Jardin-Des
 
 ## 3. Ficheros del proyecto a tener en cuenta
 
-- `portfolioWeb/tools/cv-template.html` — CV en español, listo para imprimir a PDF (A4,
-  una página). Es la plantilla "maestra" a adaptar.
-- `portfolioWeb/tools/cv-template-en.html` — misma plantilla en inglés (estructura
-  ligeramente distinta en la columna lateral: incluye Todo Jardín en destacados y ajusta
-  la lista de "University & personal projects").
-- `portfolioWeb/src/data/profile.ts`, `portfolioWeb/src/data/notes.ts`,
-  `portfolioWeb/src/data/skills.ts` — fuente de verdad de estos mismos datos, usada por la
-  versión 3D interactiva del portfolio (no confundir con el CV en HTML, pero deben
-  mantenerse coherentes entre sí si se cambia algo estructural, como fechas).
-- Exportación a PDF: Microsoft Edge en modo headless, por ejemplo:
-  `msedge --headless=new --disable-gpu --no-pdf-header-footer --print-to-pdf="salida.pdf" "file:///ruta/al/cv-template.html"`
+- `CVPlantillas/cv-template.html` y `CVPlantillas/cv-template-en.html` — plantillas
+  "maestras" (ES/EN), sin adaptar a ninguna oferta concreta.
+- `CvModificables/cv-modificable_es.html` y `CvModificables/cv-modificable_en.html` — copias
+  de trabajo que se sobrescriben cada vez que se adapta el CV a una oferta nueva; de aquí
+  sale el PDF final.
+- `utils/export-cv.mjs` — exporta un HTML a PDF con Microsoft Edge en modo headless.
+  Uso: `node utils/export-cv.mjs <ruta-a-template.html> [nombre-salida]` (el PDF se guarda
+  en `curriculum_mod_pdf/`).
+- `app/data.js`, `app/app.js`, `app/index.html`, `app/styles.css` — mini-gestor de
+  candidaturas. **Los datos de las ofertas van en `app/data.js`** (array `DEFAULT_OFFERS`,
+  seed inicial); `app/index.html` es solo estructura/markup y `app/app.js` es la lógica —
+  **no se tocan para dar de alta una oferta**.
+- `estado/estado-y-configuracion.json` — snapshot del estado real de la app (equivalente al
+  `localStorage` que usa `app/app.js`). Si existe, hay que mantenerlo sincronizado con
+  `app/data.js` cada vez que se añade o cambia una oferta.
 
 ---
 

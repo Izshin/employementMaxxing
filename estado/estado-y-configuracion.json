@@ -1,6 +1,73 @@
 {
   "offers": [
     {
+      "id": "deloitte-react-node",
+      "titulo": "Full Stack Developer (React + Node.js + GCP)",
+      "empresa": "Deloitte",
+      "modalidad": "Híbrido flexible",
+      "ubicacion": "Sevilla, España (preferencia)",
+      "fechaEnvio": "",
+      "estado": "enviada",
+      "color": "#86bc25",
+      "url": "",
+      "descripcion": "Deloitte busca un/a profesional para proyectos tecnológicos de alto impacto, desarrollando aplicaciones web modernas tanto en frontend como en backend. Piden React/React.js, Node.js, Google Cloud Platform (GCP), REST APIs/arquitecturas orientadas a servicios, Git y metodologías ágiles. Se valora TypeScript, Docker/CI-CD, SQL/NoSQL y entornos cloud/microservicios. Condiciones: horario flexible, híbrido (oficina/cliente/teletrabajo), teambuildings, bienestar integral, voluntariados y plan de retribución flexible.",
+      "cv": {
+        "nombre": "Ivan-Fernandez-Limarquez-CV-Deloitte.pdf",
+        "ruta": "../curriculum_mod_pdf/Ivan-Fernandez-Limarquez-CV-Deloitte.pdf",
+        "fuente": "../CvModificables/cv-modificable_es.html",
+        "idioma": "Español"
+      },
+      "carta": {
+        "enviada": false,
+        "texto": "Nota de presentación integrada en el propio CV (bloque \"cover-note\"):\n\n\"Aunque mi experiencia laboral remunerada arrancó en 2026, llevo programando de forma continua entre proyectos universitarios altamente enfocados al código y a la simulación de clientes reales, hackathones (CosmoCrush, Space25) y prácticas/colaboraciones freelance (KnittedForYou), además de mi puesto actual en Click-IT, donde trabajo tanto en frontend con React como en backend con Node.js. Actualmente resido en Sevilla y busco continuar mi carrera profesional en esta ciudad.\""
+      },
+      "tecnologias": [
+        "React",
+        "Node.js",
+        "Google Cloud Platform",
+        "REST APIs",
+        "Git",
+        "Scrum",
+        "TypeScript",
+        "Docker",
+        "CI/CD",
+        "SQL"
+      ],
+      "puntosEntrevista": [
+        "La Farga (Click-IT): mi caso real de Node.js en producción (Fastify), además de Angular en frontend. Es el ancla de la parte Node.js.",
+        "React: Scubex, Orquesta Elegidos, el portfolio 3D y componentes de KnittedForYou. Cubre de sobra el requisito de React/React.js.",
+        "REST APIs: OAuth 2.0 con Google, GBIF y Open-Meteo en Scubex; integración de la API REST de Microsoft Planner en GSharp. Sé diseñar y consumir APIs, no solo consumirlas.",
+        "GCP: PUNTO DÉBIL, no tengo experiencia directa. Reconducir hacia despliegues cloud reales (Vercel, Railway, PythonAnywhere) y disposición a aprenderlo rápido. NO decir que lo domino.",
+        "TypeScript: QuizzieD (React + TypeScript) y el portfolio 3D. Cubre el \"se valorará\".",
+        "Docker: uvlhub, completamente dockerizado. CI/CD: GitHub Actions en varios proyectos.",
+        "SQL/NoSQL: PostgreSQL con soltura (Scubex, Railway). NoSQL no lo he tocado — ser honesto si preguntan.",
+        "Microservicios: no tengo experiencia formal con arquitecturas de microservicios; hablar de servicios REST independientes (GSharp, Scubex) como lo más cercano.",
+        "Git y ágil: uso diario de Git, y Scrum en el grado y en Click-IT."
+      ],
+      "adaptacionCV": [
+        "Título del CV cambiado a \"Ingeniero de Software — Full Stack (React & Node.js)\".",
+        "Color del CV a la marca real de Deloitte: verde oscuro (#046a38) como acento (bordes, títulos, enlaces) y verde claro (#e2f3e6) de fondo en los tags.",
+        "Resumen reescrito para abrir con React, Node.js, REST APIs y Git/Scrum en equipos ágiles.",
+        "Experiencia de Click-IT: La Farga (Node.js/Fastify) primero, GSharp (REST API) segundo, Kam y .NET después.",
+        "Proyectos destacados reordenados: Scubex (React) → Orquesta Elegidos (React) → Portfolio 3D (React) → Todo Jardín (Django, al final por ser el menos relevante aquí).",
+        "Proyectos de universidad: QuizzieD (React + TypeScript) y Truco Beasts (React) primero; uvlhub destacando Docker en vez de Python; se quitó Othello AI (Keras/Python, poco relevante).",
+        "Stack técnico: JavaScript/TypeScript primero en lenguajes; React y Fastify primero en frameworks; REST APIs, Git y Scrum primero en herramientas.",
+        "Cover-note sin cifra de años (la oferta no exige un mínimo), y añadida la preferencia explícita por trabajar en Sevilla."
+      ],
+      "adaptacionCarta": [
+        "La oferta no exige un mínimo de años de experiencia, así que la nota no menciona ninguna cifra.",
+        "Se deja claro que la experiencia remunerada arranca en 2026 — no se oculta.",
+        "Se añade explícitamente la preferencia por continuar la carrera en Sevilla, tal y como se pidió."
+      ],
+      "claimsExperiencia": [
+        "DICHO: experiencia real con React (varios proyectos) y Node.js/Fastify (La Farga).",
+        "DICHO: preferencia por trabajar en/desde Sevilla.",
+        "NO DICHO: ninguna experiencia con Google Cloud Platform, NoSQL ni arquitecturas de microservicios formales."
+      ],
+      "notas": "El CV se generó desde CvModificables/cv-modificable_es.html y se exportó con utils/export-cv.mjs.",
+      "color2": "#101820"
+    },
+    {
       "id": "profile-angular-python",
       "titulo": "Desarrollador/a Junior (Angular + Python)",
       "empresa": "Profile",
