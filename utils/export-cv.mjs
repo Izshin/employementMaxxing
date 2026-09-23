@@ -8,7 +8,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
-const OUTPUT_DIR = path.join(ROOT, "curriculum_exportado_mod");
+const OUTPUT_DIR = path.join(ROOT, "curriculum_mod_pdf");
 
 const EDGE_CANDIDATES = [
   "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",

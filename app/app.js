@@ -49,10 +49,20 @@ function brandPair(offer) {
   const s1 = isLight ? Math.max(s, 0.7) : s;
   const l1 = isLight ? Math.min(Math.max(l, 0.46), 0.58) : l;
   const b1 = isLight ? hslToHex(h, s1, l1) : base;
-  const s2 = Math.min(s1 + 0.1, 0.92);
-  const l2 = isLight ? Math.min(Math.max(l1, 0.46), 0.58) : Math.max(Math.min(l, 0.62), 0.32);
-  const b2 = hslToHex(h + 140, s2, l2);
+
+  const raw2 = offer.color2 || hslToHex(h + 140, Math.min(s + 0.1, 0.92), Math.max(Math.min(l, 0.62), 0.32));
+  let b2 = raw2;
+  if (isLight) {
+    const [h2, s2, l2] = hexToHsl(raw2);
+    b2 = hslToHex(h2, Math.max(s2, 0.7), Math.min(Math.max(l2, 0.46), 0.58));
+  }
   return { b1, b2 };
+}
+
+/* Sugerencia de segundo color cuando el usuario aún no ha elegido uno propio. */
+function deriveColor2(hex) {
+  const [h, s, l] = hexToHsl(hex || PALETTE[0]);
+  return hslToHex(h + 140, Math.min(s + 0.1, 0.92), Math.max(Math.min(l, 0.62), 0.32));
 }
 
 const $ = (sel) => document.querySelector(sel);
@@ -165,7 +175,7 @@ function renderStats() {
     .concat(ESTADOS.filter((e) => counts[e.id]).map((e) => ({ label: e.label, value: counts[e.id], c: variantVar(e.variant) })));
 
   $('#stats').innerHTML = cells
-    .map((c) => `<div class="stat"><b>${c.value}</b><span class="stat-label">${esc(c.label)}</span></div>`)
+    .map((c) => `<div class="stat" style="${c.c ? `--stat-c:${esc(c.c)}` : ''}"><b>${c.value}</b><span class="stat-label">${esc(c.label)}</span></div>`)
     .join('');
 }
 
@@ -329,9 +339,8 @@ function detailEditBody(o, cv, carta) {
   const estadoOpts = ESTADOS.map(
     (e) => `<option value="${esc(e.id)}"${e.id === o.estado ? ' selected' : ''}>${esc(e.label)}</option>`
   ).join('');
-  const colorOpts = PALETTE.map(
-    (c) => `<option value="${esc(c)}"${c === o.color ? ' selected' : ''}>${esc(c)}</option>`
-  ).join('');
+  const color1 = o.color || PALETTE[0];
+  const color2 = o.color2 || deriveColor2(color1);
 
   const datosBody = `
       <div class="row">
@@ -342,7 +351,14 @@ function detailEditBody(o, cv, carta) {
         <div class="field"><label>Ubicación</label><input class="input" type="text" name="ubicacion" value="${esc(o.ubicacion)}" /></div>
         <div class="field"><label>Fecha de envío</label><input class="input" type="date" name="fechaEnvio" value="${esc(o.fechaEnvio)}" /></div>
         <div class="field"><label>URL de la oferta</label><input class="input" type="url" name="url" value="${esc(o.url)}" /></div>
-        <div class="field"><label>Color de la carta</label><select class="select" name="color">${colorOpts}</select></div>
+        <div class="field">
+          <label>Color 1</label>
+          <input class="color-swatch" type="color" name="color1" value="${esc(color1)}" />
+        </div>
+        <div class="field">
+          <label>Color 2</label>
+          <input class="color-swatch" type="color" name="color2" value="${esc(color2)}" />
+        </div>
       </div>`;
 
   const cvBody = `
@@ -392,7 +408,8 @@ function applyForm(o, form) {
   o.ubicacion = get('ubicacion');
   o.fechaEnvio = get('fechaEnvio');
   o.url = get('url');
-  o.color = get('color') || PALETTE[0];
+  o.color = get('color1') || PALETTE[0];
+  o.color2 = get('color2') || deriveColor2(o.color);
   o.descripcion = get('descripcion');
   o.cv = { nombre: get('cvNombre'), ruta: get('cvRuta'), fuente: get('cvFuente'), idioma: get('cvIdioma') };
   o.carta = { enviada: f.get('cartaEnviada') === 'on', texto: get('cartaTexto') };
@@ -435,6 +452,7 @@ function newOffer() {
     fechaEnvio: new Date().toISOString().slice(0, 10),
     estado: 'preparando',
     color: PALETTE[state.offers.length % PALETTE.length],
+    color2: deriveColor2(PALETTE[state.offers.length % PALETTE.length]),
     url: '',
     descripcion: '',
     cv: { nombre: '', ruta: '', fuente: '', idioma: '' },
@@ -502,6 +520,32 @@ $('#view-detail').addEventListener('submit', (ev) => {
   showDetail(detailId, 'view');
 });
 
+/* Guarda un archivo en el disco del usuario: selector nativo si el navegador lo soporta, si no, descarga normal. */
+async function saveToDisk(filename, text) {
+  if (window.showSaveFilePicker) {
+    try {
+      const handle = await window.showSaveFilePicker({
+        suggestedName: filename,
+        types: [{ description: 'JSON', accept: { 'application/json': ['.json'] } }],
+      });
+      const writable = await handle.createWritable();
+      await writable.write(text);
+      await writable.close();
+      return true;
+    } catch (e) {
+      if (e.name === 'AbortError') return false;
+      console.warn('No se pudo usar el selector de guardado, uso descarga normal:', e);
+    }
+  }
+  const blob = new Blob([text], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = filename;
+  a.click();
+  URL.revokeObjectURL(a.href);
+  return true;
+}
+
 $('#btn-export').addEventListener('click', () => {
   const blob = new Blob([JSON.stringify(state, null, 2)], { type: 'application/json' });
   const a = document.createElement('a');
@@ -519,8 +563,12 @@ $('#file-import').addEventListener('change', async (ev) => {
   try {
     const data = JSON.parse(await file.text());
     if (!Array.isArray(data.offers)) throw new Error('Formato no válido');
-    state = data;
+    state = { offers: data.offers };
     saveState();
+    if (data.theme === 'light' || data.theme === 'dark') {
+      applyTheme(data.theme);
+      localStorage.setItem(THEME_KEY, data.theme);
+    }
     showList();
     toast('Importado');
   } catch (e) {
@@ -535,6 +583,15 @@ $('#btn-reset').addEventListener('click', () => {
   saveState();
   showList();
   toast('Datos restaurados');
+});
+
+$('#btn-save-all').addEventListener('click', async () => {
+  saveState();
+  const theme = document.documentElement.getAttribute('data-theme') || 'dark';
+  localStorage.setItem(THEME_KEY, theme);
+  const backup = { offers: state.offers, theme };
+  const ok = await saveToDisk('estado-y-configuracion.json', JSON.stringify(backup, null, 2));
+  if (ok) toast('Guardado en tu PC');
 });
 
 $('#btn-theme').addEventListener('click', () => {

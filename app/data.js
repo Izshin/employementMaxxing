@@ -11,6 +11,74 @@ const ESTADOS = [
 
 const DEFAULT_OFFERS = [
   {
+    id: 'profile-angular-python',
+    titulo: 'Desarrollador/a Junior (Angular + Python)',
+    empresa: 'Profile',
+    modalidad: 'Remoto · Contrato indefinido',
+    ubicacion: 'España (100% remoto)',
+    fechaEnvio: '',
+    estado: 'preparando',
+    color: '#f2c94c',
+    url: '',
+    descripcion:
+      'Consultora tecnológica que busca desarrolladores/as Junior con experiencia en Angular y Python ' +
+      'para incorporarse a un proyecto estable en remoto. Piden más de 1 año de experiencia en desarrollo, ' +
+      'con capacidad para desenvolverse tanto en tareas frontend como backend. Condiciones: contrato ' +
+      'indefinido, salario competitivo, flexibilidad horaria, vacaciones adicionales por antigüedad, ' +
+      'formación a medida y retribución flexible.',
+    cv: {
+      nombre: 'Ivan-Fernandez-Limarquez-CV-Profile.pdf',
+      ruta: '../curriculum_mod_pdf/Ivan-Fernandez-Limarquez-CV-Profile.pdf',
+      fuente: '../CvModificables/cv-modificable_es.html',
+      idioma: 'Español',
+    },
+    carta: {
+      enviada: false,
+      texto:
+        'Nota de presentación integrada en el propio CV (bloque "cover-note"):\n\n' +
+        '"Llevo 6 meses de experiencia laboral remunerada (en Click-IT, desde mayo de 2026), pero sumo más ' +
+        'de 3 años programando de forma continua entre proyectos universitarios altamente enfocados al ' +
+        'código y a la simulación de clientes reales, hackathones (CosmoCrush, Space25) y ' +
+        'prácticas/colaboraciones freelance (KnittedForYou), trabajando tanto con Angular (frontend) como ' +
+        'con Python/Django (backend)."',
+    },
+    tecnologias: [
+      'Angular', 'Python', 'Django', 'JavaScript', 'TypeScript', 'REST APIs',
+      'Desarrollo frontend', 'Desarrollo backend', 'Git',
+    ],
+    puntosEntrevista: [
+      'La Farga (Click-IT): mi caso real de Angular en producción (gestión de vehículos y aparcamiento para L\'Hospitalet), con trato directo con el cliente. Es el ancla de la parte Angular.',
+      'GSharp (Click-IT): backend en Python/Django con integración de la API REST de Microsoft Planner. Es el ancla de la parte Python.',
+      'Todo Jardín: proyecto Django end-to-end propio (catálogo, carrito, checkout con Braintree, panel admin), demuestra Python fuera del trabajo también.',
+      'uvlhub y Othello AI: dos proyectos personales más en Python (Flask dockerizado y CNN en Keras), útiles si preguntan por proyectos fuera del trabajo.',
+      'Full stack: Kam (.NET/C#) y Scubex (Spring Boot) muestran soltura en backend en general, no solo Python.',
+      'Frontend más allá de Angular: React en Scubex, Orquesta Elegidos y el portfolio 3D, por si preguntan por otros frameworks.',
+      'Años de experiencia: 6 meses de experiencia laboral real en Click-IT (desde mayo 2026), pero más de 3 años programando entre universidad, hackathones y freelance (KnittedForYou). Ser transparente sobre esta distinción si preguntan.',
+      'Perfil junior: mostrar ganas de aprender y trabajar en equipo, tal y como pide la oferta, sin sobrevender experiencia.',
+    ],
+    adaptacionCV: [
+      'Título del CV cambiado a "Ingeniero de Software — Full Stack (Angular & Python)".',
+      'Color del CV con la marca real de Profile: navy (#14294d) como color principal (bordes, títulos, enlaces) y amarillo suave (#fbe8a6) como color secundario en los tags del stack técnico.',
+      'Resumen reescrito para abrir con frontend/backend, Angular y Python (Django), y REST APIs.',
+      'Experiencia de Click-IT reordenada: La Farga (Angular) primero, GSharp (Angular + Python/Django) segundo, Kam y .NET después.',
+      'Proyectos destacados: se mantiene Todo Jardín (Django) primero por ser el proyecto Python más completo.',
+      'Proyectos de universidad reordenados: uvlhub y Othello AI (ambos Python) primero, luego Truco Beasts y hackathones.',
+      'Stack técnico: Angular movido al principio de frameworks, justo antes de Django.',
+      'Cover-note ajustada para distinguir "6 meses de experiencia laboral real" (Click-IT) de "más de 3 años" programando entre universidad y proyectos, mencionando explícitamente Angular y Python/Django.',
+    ],
+    adaptacionCarta: [
+      'La oferta exige más de 1 año de experiencia; la nota distingue "6 meses" de experiencia laboral real y "más de 3 años" contando universidad y proyectos, cifra que cubre de sobra el mínimo pedido.',
+      'Se deja claro que la experiencia remunerada arranca en 2026 — no se oculta.',
+      'Se nombra a Click-IT como puesto actual donde se usan ambas tecnologías pedidas (Angular y Python/Django).',
+    ],
+    claimsExperiencia: [
+      'DICHO: experiencia real con Angular (La Farga) y Python/Django (GSharp, Todo Jardín).',
+      'DICHO: "6 meses" de experiencia laboral real (Click-IT, desde mayo 2026) y "más de 3 años" programando entre universidad, hackathones y freelance. Verificable y desglosable si preguntan.',
+      'NO DICHO: ninguna cifra de años de experiencia laboral remunerada distinta de los 6 meses reales en Click-IT.',
+    ],
+    notas: 'El CV se generó desde CvModificables/cv-modificable_es.html y se exportó con utils/export-cv.mjs.',
+  },
+  {
     id: 'scalian-fullstack',
     titulo: 'Full Stack Developer (React + Django)',
     empresa: 'Scalian Spain',
@@ -18,7 +86,7 @@ const DEFAULT_OFFERS = [
     ubicacion: 'España (100% teletrabajo)',
     fechaEnvio: '',
     estado: 'enviada',
-    color: '#5a2d82',
+    color: '#e2007a',
     url: '',
     descripcion:
       'Grupo internacional (+6.000 personas en Europa y Norteamérica) con servicios de Data, Cloud e IA. ' +
