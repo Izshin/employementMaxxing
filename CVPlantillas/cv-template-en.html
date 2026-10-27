@@ -93,6 +93,21 @@
     font-weight: 600;
     white-space: nowrap;
   }
+  .academic-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 3px; }
+  .academic-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 5px;
+    border: 1px solid #d7dde8;
+    border-radius: 3px;
+    background: #f5f7fc;
+    font-size: 8pt;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+  .academic-tag strong { color: #1f47a3; }
+  .academic-tag span { color: #53627d; font-weight: 600; }
   .skill-line { margin-bottom: 7px; }
   .skill-line b { display: block; font-size: 8.6pt; color: #12233f; margin-bottom: 2px; }
   footer {
@@ -223,10 +238,13 @@
     <section>
       <h2>Tech stack</h2>
       <div class="skill-line">
-        <b>Languages</b>
-        <div class="tags">
-          <span class="tag">Python</span><span class="tag">Java</span><span class="tag">JavaScript</span>
-          <span class="tag">TypeScript</span><span class="tag">C#</span>
+        <b>Languages · academic experience</b>
+        <div class="academic-tags">
+          <span class="academic-tag"><strong>Python</strong><span>4 years</span></span>
+          <span class="academic-tag"><strong>Java</strong><span>4 years</span></span>
+          <span class="academic-tag"><strong>TypeScript / JavaScript + React</strong><span>3 years</span></span>
+          <span class="academic-tag"><strong>HTML + CSS</strong><span>4 years</span></span>
+          <span class="academic-tag"><strong>C#</strong><span>1 year</span></span>
         </div>
       </div>
       <div class="skill-line">

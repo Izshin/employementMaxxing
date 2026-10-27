@@ -33,19 +33,19 @@ Startup sueca · Enero – Marzo
 ## Proyectos destacados
 
 ### Scubex — Trabajo de Fin de Grado
-https://scubex.vercel.app/ · https://github.com/Izshin/Scubex · React MobX + Spring Boot + PostgreSQL
+https://scubex.vercel.app/ · https://github.com/Izshin/Scubex · React MobX (TypeScript) + Spring Boot + PostgreSQL
 
 - Red social full-stack para buceadores; diseño, desarrollo y despliegue (Vercel + Railway).
 - OAuth 2.0 con Google, detección de especies (API GBIF), previsión meteorológica (Open-Meteo).
 - 137 tests unitarios, +90% de cobertura.
 
 ### Orquesta Elegidos — Diseño y desarrollo web
-https://orquestaelegidos.com/ · https://github.com/Izshin/Elegidos · React + Vite + GitHub Pages
+https://orquestaelegidos.com/ · https://github.com/Izshin/Elegidos · React + TypeScript + Vite + GitHub Pages
 
 - Web completa desde cero para banda con +30 años de trayectoria: diseño, noticias auto-actualizables, contacto vía Gmail, CD en GitHub Pages.
 
 ### Portfolio 3D interactivo
-https://ivanfernandezlimarquez.com · React 19 + Three.js + R3F + Drei
+https://ivanfernandezlimarquez.com · React 19 (TypeScript) + Three.js + R3F + Drei
 
 - Escritorio 3D navegable con currículum interactivo, tarjeta de visita animada y reproductor de música.
 - Optimización de carga de 209 MB a 45 MB (WebP, decimado de mallas, code splitting).
@@ -73,7 +73,8 @@ Instituto de Idiomas, Univ. de Sevilla
 
 ## Stack técnico
 
-- **Lenguajes:** Python, Java, JavaScript, TypeScript, C#
+- **Lenguajes:** Python, Java, JavaScript, TypeScript, C#, HTML, CSS
+- **Experiencia académica:** Python (4 años), Java (4 años), TypeScript y JavaScript con React (3 años), HTML + CSS (4 años), C# (1 año)
 - **Frameworks / libs:** React, Angular, Spring Boot, Django, Flask, .NET, JUnit, Keras, Three.js, R3F, Framer Motion
 - **Herramientas:** Git, GitHub Actions, Docker, Vercel, Railway, Vite, Figma, CI/CD, Scrum, REST, OAuth 2.0
 

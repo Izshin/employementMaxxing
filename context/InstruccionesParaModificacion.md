@@ -82,6 +82,25 @@ Eres mi asistente de adaptación de CV. Tu tarea, cada vez que te dé una oferta
    que dar de alta o actualizar una oferta en el gestor, edita **`app/data.js`** (datos
    semilla) y, si existe, **`estado/estado-y-configuracion.json`** (estado persistido
    actual de la app), manteniendo ambos coherentes entre sí.
+10. **Verifica las tecnologías en los repositorios, nunca las asumas**: si no tienes claro
+   con qué lenguaje o stack está hecho un proyecto (por ejemplo, si algo es JavaScript o
+   TypeScript), **NO lo inventes ni lo deduzcas**: compruébalo en el repositorio real de
+   GitHub (`github.com/Izshin/<repo>`) mirando el lenguaje principal del repo, el
+   `package.json`, la presencia de `tsconfig.json` o las extensiones de los ficheros
+   (`.ts`/`.tsx` vs `.js`/`.jsx`). Usa la lista de "Lenguajes verificados por repositorio"
+   de la sección 2 como referencia y, si un proyecto no aparece ahí o la información no
+   coincide, consúltalo en GitHub antes de escribir nada. Si no puedes consultarlo,
+   pregúntame en lugar de suponer.
+11. **Ecosistema JavaScript y HTML+CSS sí se pueden dar por hechos**: cuando una oferta pida
+   **JavaScript**, puedo acreditarlo con todo lo construido sobre su ecosistema —
+   **TypeScript** (superset de JavaScript: Scubex, Orquesta Elegidos, portfolio 3D, QuizzieD,
+   Angular en Click-IT), **Node.js** (Fastify en La Farga), React, Vite y los propios
+   ficheros de configuración de esos proyectos, escritos en JS/TS. No es inventar: es la
+   misma base de lenguaje. Del mismo modo, **HTML y CSS** se pueden afirmar en cualquier
+   proyecto con frontend web (Scubex, Orquesta Elegidos, portfolio 3D, KnittedForYou, Todo
+   Jardín…), porque toda interfaz web pasa por maquetación en HTML y CSS. Lo que sigue sin
+   poder hacerse es atribuir un lenguaje o framework concreto a un proyecto que no lo usa
+   (ver punto 10).
 
 ---
 
@@ -137,7 +156,7 @@ ingeniería de requisitos, traduciendo esas necesidades en aplicaciones y featur
 ### Proyectos destacados
 
 **Scubex** — Trabajo de Fin de Grado · https://scubex.vercel.app/ ·
-github.com/Izshin/Scubex · React MobX + Spring Boot + PostgreSQL
+github.com/Izshin/Scubex · React MobX en **TypeScript** + Spring Boot + PostgreSQL
 - Red social full-stack para buceadores: diseño, desarrollo y despliegue completos
   (Vercel + Railway).
 - Inicio de sesión con Google OAuth 2.0.
@@ -146,7 +165,7 @@ github.com/Izshin/Scubex · React MobX + Spring Boot + PostgreSQL
 - 137 tests unitarios, +90% de cobertura de código.
 
 **Orquesta Elegidos** — Diseño y desarrollo web · https://orquestaelegidos.com/ ·
-github.com/Izshin/Elegidos · React + Vite + GitHub Pages
+github.com/Izshin/Elegidos · React + **TypeScript** + Vite + GitHub Pages
 - Banda andaluza con más de 30 años sobre el escenario; recopilé los requisitos
   directamente con el cliente real (la banda) y diseñé, desarrollé y desplegué su web
   entera desde cero.
@@ -155,8 +174,8 @@ github.com/Izshin/Elegidos · React + Vite + GitHub Pages
 - Integración con Gmail para el formulario de contacto.
 - Despliegue continuo en GitHub Pages.
 
-**Portfolio 3D interactivo** — https://ivanfernandezlimarquez.com · React 19 + Three.js +
-React Three Fiber + Drei
+**Portfolio 3D interactivo** — https://ivanfernandezlimarquez.com · React 19 en
+**TypeScript** + Three.js + React Three Fiber + Drei
 - Escritorio 3D navegable con currículum interactivo, tarjeta de visita animada y
   reproductor de música.
 - Optimización de la carga de 209 MB a 45 MB (conversión a WebP, decimado de mallas,
@@ -188,8 +207,27 @@ https://jhonpgpi.eu.pythonanywhere.com/ · github.com/Izshin/Todo-Jardin-Des
   herramienta que estima la severidad del impacto de un meteorito, con visualización 3D en
   globo terráqueo. Solo trabajé en el frontend.
 
+### Lenguajes verificados por repositorio (comprobado en GitHub, octubre 2026)
+- **Scubex** (github.com/Izshin/Scubex) — frontend en **TypeScript** (React MobX, tiene
+  `tsconfig.json`; el lenguaje principal que muestra GitHub es TeX por la memoria del TFG)
+  + backend Java/Spring Boot + PostgreSQL.
+- **Orquesta Elegidos** (github.com/Izshin/Elegidos) — **TypeScript** (React + Vite).
+- **Portfolio 3D** (github.com/Izshin/webPortfolio) — **TypeScript** (React 19 + Three.js).
+- **QuizzieD** (github.com/Izshin/QuizzieD) — **TypeScript** (React + Framer Motion).
+- **Truco Beasts** (github.com/Izshin/Truco) — backend **Java** (Spring Boot); frontend en
+  **JavaScript** (ficheros `.jsx`).
+- **CosmoCrush** (github.com/Izshin/CosmoCrush) — **JavaScript**.
+- **Space25** (github.com/Space-Mon-Keys/Frontend) — **JavaScript**.
+- **Todo Jardín** (github.com/Izshin/Todo-Jardin-Des) — **Python/Django** con plantillas
+  HTML.
+- **Othello AI** (github.com/Izshin/Othelo-AI-bot) — **Python** (Keras).
+- **uvlhub** (github.com/Izshin/uvlhub) — **Python** (Flask, dockerizado).
+- **Kam (mesoestetic)**, de Click-IT — frontend **TypeScript** (github.com/Izshin/AppKamFront)
+  y backend **C#/.NET** (github.com/Izshin/AppKamBack).
+
 ### Stack técnico
-- **Lenguajes:** Python, Java, JavaScript, TypeScript, C#
+- **Lenguajes:** Python, Java, JavaScript, TypeScript, C#, HTML, CSS (HTML y CSS en todos
+  los proyectos con frontend web)
 - **Frameworks/librerías:** React, Angular, Spring Boot, Django, Flask, .NET, JUnit, Keras,
   Three.js, React Three Fiber, React Three Drei, Framer Motion
 - **Herramientas/prácticas:** Git, GitHub Actions, GitHub Pages, Docker, Vercel, Railway,

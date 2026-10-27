@@ -11,6 +11,103 @@ const ESTADOS = [
 
 const DEFAULT_OFFERS = [
   {
+    id: 'ofimatica-frontend',
+    titulo: 'Desarrollador/a Front-End — Diseño y maquetación (R&D)',
+    empresa: 'OFIMÁTICA',
+    modalidad: 'Teletrabajo · Flexibilidad horaria',
+    ubicacion: 'España · Oficinas en Jaén, Madrid y Málaga (sede del puesto no indicada)',
+    fechaEnvio: '',
+    estado: 'preparando',
+    color: '#ed2a4d',
+    color2: '#181818',
+    url: '',
+    descripcion:
+      'OFIMÁTICA, fundada en 1981, desarrolla software vertical para hoteles, agencias de viajes, ' +
+      'touroperadores y receptivos, restaurantes y comercio, además de autobuses, estéticas y centros ' +
+      'de formación. Cuenta con más de 30 programas y ha informatizado más de 17.000 empresas. Desde ' +
+      '2019 forma parte de CSI a través de TSS. Según la oferta, reúne 70 profesionales, con oficinas ' +
+      'en Jaén, Madrid y Málaga y presencia en España y Latinoamérica. Busca incorporar un perfil ' +
+      'al departamento de R&D para gestionar, diseñar y maquetar el Front-End de varios proyectos ' +
+      'simultáneos, en equipo con programadores, Quality Tester y Product Owner. Requisitos: grado ' +
+      'o FP superior; HTML (HTML5 deseable), CSS, SASS, Bootstrap 3 o 4, JavaScript, XSLT y maquetación ' +
+      'sin framework; resolución de problemas con algoritmia y patrones de diseño, y metodologías ' +
+      'Agile (SCRUM). Ofrece flexibilidad horaria, teletrabajo y formaciones internas. No se indican ' +
+      'salario, tipo de contrato ni mínimo de años de experiencia.',
+    cv: {
+      nombre: 'Ivan-Fernandez-Limarquez-CV-Ofimatica.pdf',
+      ruta: '../curriculum_mod_pdf/Ivan-Fernandez-Limarquez-CV-Ofimatica.pdf',
+      fuente: '../CvModificables/cv-modificable_es.html',
+      idioma: 'Español',
+    },
+    carta: {
+      enviada: false,
+      texto:
+        'Hola, equipo de OFIMÁTICA:\n\n' +
+        'Soy Iván Fernández Limárquez, graduado en Ingeniería del Software por la Universidad de ' +
+        'Sevilla, especializado en frontend y diseño UX. Me interesa vuestro puesto de diseño y ' +
+        'maquetación en R&D por la combinación de interfaces, software de gestión y trabajo en equipo.\n\n' +
+        'En Click-IT desarrollo aplicaciones con Angular, HTML/CSS y JavaScript/TypeScript: La Farga ' +
+        '(gestión de vehículos y aparcamiento, con trato directo con el cliente) y GSharp (CRM interno). ' +
+        'También he trabajado en Kam, software de gestión de mercados, refactorizando código legacy ' +
+        'y resolviendo cuellos de botella. En KnittedForYou diseñé mockups y flujos de usuario en Figma ' +
+        'e implementé pantallas React. Para Orquesta Elegidos recogí requisitos con la banda, cliente ' +
+        'real, y diseñé y desarrollé su web desde cero.\n\n' +
+        'Mis proyectos incluyen Todo Jardín, una tienda Django con plantillas HTML y CSS, y Scubex, ' +
+        'una aplicación full-stack con 137 tests unitarios y más del 90% de cobertura. Aporto una base ' +
+        'de HTML, CSS y JavaScript, Scrum como práctica de trabajo y aprendizaje rápido. SASS, ' +
+        'Bootstrap 3/4 y XSLT son tecnologías en las que tendría que formarme; no las presento como ' +
+        'experiencia previa. Mis proyectos con React o Angular tampoco equivalen a acreditar ' +
+        'maquetación sin framework.\n\n' +
+        'Resido en Sevilla y valoro el teletrabajo, la formación interna y la oportunidad de contribuir ' +
+        'a soluciones útiles para sectores como comercio y turismo.\n\n' +
+        'Gracias por vuestro tiempo.\nIván Fernández Limárquez',
+    },
+    tecnologias: [
+      'HTML', 'HTML5 (deseable)', 'CSS', 'SASS', 'Bootstrap 3/4', 'JavaScript', 'XSLT',
+      'Maquetación sin framework', 'Algoritmia', 'Patrones de diseño', 'Agile', 'Scrum',
+    ],
+    puntosEntrevista: [
+      'HTML/CSS y diseño: Orquesta Elegidos, del wireframe a producción con requisitos de la banda; KnittedForYou, mockups y flujo de usuario en Figma antes de implementar pantallas.',
+      'JavaScript: Truco Beasts tiene frontend JavaScript (React); Angular en Click-IT y Scubex, Orquesta Elegidos y portfolio usan TypeScript, dentro del ecosistema JavaScript.',
+      'Maquetación sin framework: Todo Jardín usa Django con plantillas HTML y CSS; es el ejemplo más próximo, no una prueba de experiencia sin framework o sin librerías CSS. No afirmar que los proyectos React/Angular cumplen ese requisito.',
+      'SASS, Bootstrap 3/4 y XSLT: no constan en el historial. No afirmar dominio ni experiencia; explicar la base HTML/CSS/JavaScript y la disposición a formarse. HTML5 específico tampoco está documentado por separado.',
+      'Algoritmia: preparar el caso Othello AI, búsqueda MCTS y evaluación de posiciones con CNN; para problemas de rendimiento, refactorización y cuellos de botella de Kam en Click-IT.',
+      'Patrones de diseño: no consta experiencia explícita con patrones concretos. Preparar solo ejemplos verificables del código propio; no atribuir patrones ni experiencia formal sin comprobarlos.',
+      'Scrum y colaboración: Scrum consta en el stack; Truco Beasts se desarrolló entre seis personas. No inventar experiencia previa con los roles Quality Tester o Product Owner.',
+      'Software de gestión: La Farga, GSharp y Kam en Click-IT; Todo Jardín incluye catálogo, pedidos y panel de administración, relevante al sector comercio de OFIMÁTICA.',
+      'Grado en Ingeniería del Software: Universidad de Sevilla, junio de 2026. Inglés C1. La oferta no exige un mínimo de años de experiencia.',
+      'Condiciones pendientes: confirmar alcance del teletrabajo, sede de referencia, salario y contrato; la oferta solo indica flexibilidad horaria, teletrabajo y formaciones internas.',
+    ],
+    adaptacionCV: [
+      'Título: Desarrollador Frontend — Maquetación & UX. Resumen centrado en HTML/CSS, JavaScript/TypeScript, diseño de interfaces y Scrum.',
+      'Misma estructura y medidas de la plantilla española; rojo de la captura de OFIMÁTICA (#ed2a4d) en bordes, rojo oscuro (#c51d3a) en textos y enlaces para contraste, negro (#181818) en titulares y rosa claro (#fff0f3) en tags. Ficha de la app en rojo y negro.',
+      'Click-IT: La Farga, GSharp y Kam como aplicaciones de gestión; refactorización y cuellos de botella vinculados expresamente a Kam. GSharp identificado como CRM, según el contexto.',
+      'KnittedForYou: requisitos, mockups y flujo de usuario antes de la implementación de pantallas con HTML/CSS.',
+      'Proyectos: Orquesta Elegidos (diseño y maquetación) → Todo Jardín (plantillas HTML y comercio) → Scubex (interfaz y tests) → Portfolio 3D (interacción y rendimiento).',
+      'HTML/CSS integrados de forma natural en los títulos de Orquesta Elegidos y Todo Jardín; sin presentar TypeScript como una tecnología solicitada expresamente.',
+      'Proyectos personales: Truco Beasts (JavaScript e interfaz), Othello AI (algoritmia), QuizzieD (animaciones) y uvlhub (tests).',
+      'Stack: HTML, CSS y JavaScript primero; Figma, Scrum y Git al inicio de herramientas. No se añaden tecnologías no acreditadas.',
+      'Carta guardada por separado en la app para conservar la estructura de la plantilla y el CV de una página A4.',
+    ],
+    adaptacionCarta: [
+      'Carta específica para R&D y software de gestión, con ejemplos de Click-IT, KnittedForYou y Orquesta Elegidos.',
+      'Sin cifras de años de experiencia, ya que la oferta no exige un mínimo.',
+      'Distingue tecnologías acreditadas de SASS, Bootstrap y XSLT, y no equipara React/Angular con maquetación sin framework.',
+      'Menciona residencia en Sevilla e interés por teletrabajo y formación; no inventa disponibilidad para trasladarse.',
+    ],
+    claimsExperiencia: [
+      'DICHO: grado, HTML/CSS, ecosistema JavaScript/TypeScript, diseño UX/Figma, Scrum y software de gestión.',
+      'DICHO: trato con cliente en Click-IT (La Farga) y Orquesta Elegidos (la banda); código legacy y cuellos de botella en Kam.',
+      'DICHO: Todo Jardín con plantillas HTML y CSS; Othello AI con búsqueda MCTS y CNN; Scubex con 137 tests y más del 90% de cobertura.',
+      'NO DICHO: experiencia con SASS, Bootstrap 3/4, XSLT, patrones de diseño concretos ni maquetación sin framework acreditada.',
+      'NO DICHO: años de experiencia, salario, contrato, 100% remoto o experiencia previa como Quality Tester/Product Owner.',
+    ],
+    notas:
+      'Oferta facilitada por el usuario, sin URL; colores tomados de la captura de su web. Registrada como Preparando, no enviada. ' +
+      'CV adaptado en CvModificables/cv-modificable_es.html y exportado con utils/export-cv.mjs. ' +
+      'El snapshot contiene la misma oferta; importar estado/estado-y-configuracion.json si la app ya tiene datos en localStorage.',
+  },
+  {
     id: 'deloitte-react-node',
     titulo: 'Full Stack Developer (React + Node.js + GCP)',
     empresa: 'Deloitte',
@@ -290,5 +387,153 @@ const DEFAULT_OFFERS = [
       'NO DICHO: Oracle, SQL Server ni SVN. No afirmar que los conozco.',
     ],
     notas: 'El CV se generó desde CvModificables/cv-modificable_en.html y se exportó con tools/export-cv.mjs.',
+  },
+  {
+    id: 'nunegal-fullstack-java',
+    titulo: 'Full Stack Developer (React/Angular/Vue + Java)',
+    empresa: 'Nunegal',
+    modalidad: '100% Teletrabajo · Contrato indefinido',
+    ubicacion: 'España (100% remoto)',
+    fechaEnvio: '',
+    estado: 'enviada',
+    color: '#1b1a6e',
+    url: '',
+    descripcion:
+      'Nunegal busca un/a Full Stack Developer para un proyecto con impacto real: frontend con React, ' +
+      'Angular o Vue y backend en Java (Spring Boot), diseño y evolución de arquitecturas de software ' +
+      '(especialmente microservicios) y aplicaciones escalables y optimizadas. Se valora Cloud (AWS, ' +
+      'Azure o GCP), bases de datos SQL y NoSQL (PostgreSQL, MongoDB), diseño/consumo de APIs REST, ' +
+      'control de versiones (Git, GitHub, Azure DevOps) y CI/CD, además de conocimientos o exposición a ' +
+      'Inteligencia Artificial. Valorable: colas de mensajería (RabbitMQ, Kafka), modelado de datos o ' +
+      'proyectos de IA. Condiciones: empresa en constante crecimiento, contrato indefinido, 100% ' +
+      'teletrabajo, retribución flexible y formación continua.',
+    cv: {
+      nombre: 'Ivan-Fernandez-Limarquez-CV-Nunegal.pdf',
+      ruta: '../curriculum_mod_pdf/Ivan-Fernandez-Limarquez-CV-Nunegal.pdf',
+      fuente: '../CvModificables/cv-modificable_es.html',
+      idioma: 'Español',
+    },
+    carta: {
+      enviada: false,
+      texto:
+        'Nota de presentación integrada en el propio CV (bloque "cover-note"):\n\n' +
+        '"Aunque mi experiencia laboral remunerada arrancó en 2026, llevo programando de forma continua ' +
+        'entre proyectos universitarios altamente enfocados al código y a la simulación de clientes ' +
+        'reales, hackathones (CosmoCrush, Space25) y prácticas/colaboraciones freelance (KnittedForYou), ' +
+        'además de mi puesto actual en Click-IT, donde trabajo en frontend con Angular y React, y en ' +
+        'proyectos propios con backend en Java/Spring Boot. Me interesa especialmente integrarme en un ' +
+        'proyecto con cultura de mejora continua y crecimiento profesional."',
+    },
+    tecnologias: [
+      'React', 'Angular', 'Java', 'Spring Boot', 'Microservicios', 'Cloud (AWS/Azure/GCP)',
+      'SQL · PostgreSQL', 'NoSQL · MongoDB', 'REST APIs', 'Git / GitHub / Azure DevOps', 'CI/CD',
+      'Inteligencia Artificial',
+    ],
+    puntosEntrevista: [
+      'Frontend React: Scubex, Orquesta Elegidos, portfolio 3D, KnittedForYou y QuizzieD. Angular: La Farga y GSharp (Click-IT), con trato directo de cliente. Vue: PUNTO DÉBIL, sin experiencia — no venderlo como propio si preguntan.',
+      'Backend Java: Scubex (Spring Boot + PostgreSQL) y Truco Beasts (Spring Boot + React). Es el ancla de la parte Java/Spring Boot pedida.',
+      'Cloud (AWS/Azure/GCP): PUNTO DÉBIL, no tengo experiencia directa con ninguno de los tres. Reconducir hacia despliegues cloud reales (Vercel, Railway, PythonAnywhere) y disposición a aprender rápido. NO decir que domino ninguno.',
+      'Microservicios: no tengo experiencia formal con arquitecturas de microservicios; hablar de servicios REST independientes (GSharp, Scubex) como lo más cercano.',
+      'SQL/NoSQL: PostgreSQL con soltura (Scubex, Railway). MongoDB/NoSQL no lo he tocado — ser honesto si preguntan.',
+      'REST APIs: OAuth 2.0 con Google, GBIF y Open-Meteo en Scubex; integración de la API REST de Microsoft Planner en GSharp. Sé diseñar y consumir APIs, no solo consumirlas.',
+      'Git/GitHub: uso diario. Azure DevOps no lo he usado formalmente — presentarlo como "familiar con Git/GitHub, dispuesto a adaptarme a Azure DevOps".',
+      'CI/CD: GitHub Actions en varios proyectos y despliegue continuo en GitHub Pages (Orquesta Elegidos).',
+      'IA: Othello AI (CNN en Keras entrenada con MCTS self-play) como exposición real a proyectos de IA, además del uso habitual de IA como herramienta de desarrollo.',
+      'Colas de mensajería (RabbitMQ/Kafka): no tengo experiencia — ser honesto si preguntan. Modelado de datos: sí, vía el diseño del esquema relacional de Scubex en PostgreSQL.',
+    ],
+    adaptacionCV: [
+      'Título del CV cambiado a "Ingeniero de Software — Full Stack (React, Angular & Java)".',
+      'Color del CV a un azul índigo oscuro a juego con la imagen de marca aportada (acento en bordes/títulos/enlaces, fondo lavanda claro en los tags).',
+      'Resumen reescrito para abrir con React/Angular, Java/Spring Boot, REST APIs, PostgreSQL, despliegues cloud y Git/CI-CD en equipos ágiles.',
+      'Proyectos destacados reordenados: Scubex (título cambiado a Java, por combinar frontend+backend+SQL) primero, luego Orquesta Elegidos, Portfolio 3D y Todo Jardín (Django, al final por ser el menos relevante aquí).',
+      'Proyectos de universidad reordenados: Truco Beasts (Spring Boot + React) y Othello AI (IA) primero.',
+      'Stack técnico: Java primero en lenguajes; Spring Boot, React y Angular primero en frameworks; REST APIs, Git, GitHub Actions, CI/CD y PostgreSQL primero en herramientas.',
+    ],
+    adaptacionCarta: [
+      'La oferta no exige un mínimo de años de experiencia, así que la cover-note no menciona ninguna cifra.',
+      'Se deja claro que la experiencia remunerada arrancó en 2026 — no se oculta.',
+      'Se menciona el interés por la cultura de mejora continua y crecimiento profesional que describe la oferta.',
+    ],
+    claimsExperiencia: [
+      'DICHO: experiencia real con React (varios proyectos), Angular (La Farga, GSharp) y Java/Spring Boot (Scubex, Truco Beasts).',
+      'DICHO: exposición a IA (Othello AI) y uso de IA como herramienta de desarrollo.',
+      'NO DICHO: ninguna experiencia con Vue, AWS/Azure/GCP, MongoDB, microservicios formales ni colas de mensajería (RabbitMQ/Kafka).',
+    ],
+    notas: 'El CV se generó desde CvModificables/cv-modificable_es.html y se exportó con utils/export-cv.mjs.',
+  },
+  {
+    id: 'paymarkfast-angular',
+    titulo: 'Desarrollador/a Frontend (Angular + JavaScript)',
+    empresa: 'PayMark Fast',
+    modalidad: 'Presencial en hub de innovación (Wayra)',
+    ubicacion: 'Madrid, España (Wayra, edificio Telefónica de Gran Vía)',
+    fechaEnvio: '',
+    estado: 'preparando',
+    color: '#e2701a',
+    url: '',
+    descripcion:
+      'PayMark Fast es una start-up tecnológica que usa Big Data e IoT para agilizar la experiencia en ' +
+      'tiendas y almacenes y mejorar la trazabilidad de productos. Está situada en Wayra, el hub de ' +
+      'innovación abierta del edificio de Telefónica de Gran Vía (Madrid). El puesto consiste en migrar ' +
+      'la actual aplicación web de PHP a Angular para ganar escalabilidad, trabajando en un equipo con un ' +
+      'programador senior y dos junior, y seguir desarrollando la web a medida que la empresa crece. ' +
+      'Requisitos: estudios informáticos, conocimientos avanzados de Angular y JavaScript, y conocimientos ' +
+      'básicos de HTML+CSS y Node.js.',
+    cv: {
+      nombre: 'Ivan-Fernandez-Limarquez-CV-PayMarkFast.pdf',
+      ruta: '../curriculum_mod_pdf/Ivan-Fernandez-Limarquez-CV-PayMarkFast.pdf',
+      fuente: '../CvModificables/cv-modificable_es.html',
+      idioma: 'Español',
+    },
+    carta: {
+      enviada: false,
+      texto:
+        'Nota de presentación integrada en el propio CV (bloque "cover-note"):\n\n' +
+        '"Aunque mi experiencia laboral remunerada arrancó en 2026, llevo programando de forma continua ' +
+        'entre proyectos universitarios altamente enfocados al código y a la simulación de clientes ' +
+        'reales, hackathones (CosmoCrush, Space25) y prácticas/colaboraciones freelance (KnittedForYou), ' +
+        'además de mi puesto actual en Click-IT, donde desarrollo en Angular y JavaScript y trabajo a ' +
+        'diario sobre código legacy, refactorizándolo y resolviendo cuellos de botella. Me motiva ' +
+        'especialmente crecer dentro de una start-up tecnológica y acompañar al producto a largo plazo. ' +
+        'Tengo disponibilidad para trasladarme según las condiciones, con preferencia por un esquema de ' +
+        'teletrabajo o híbrido cuando no sea necesario estar en la oficina."',
+    },
+    tecnologias: [
+      'Angular', 'JavaScript', 'TypeScript', 'HTML', 'CSS', 'Node.js', 'REST APIs', 'Git',
+    ],
+    puntosEntrevista: [
+      'Angular: La Farga y GSharp en Click-IT, los dos con frontend en Angular. Es el ancla principal de la oferta; preparar ejemplos concretos de componentes, servicios y estructura del proyecto.',
+      'JavaScript/TypeScript: uso diario en Click-IT (Angular en TypeScript) y en proyectos propios — Scubex, Orquesta Elegidos, el portfolio 3D y QuizzieD están en TypeScript; Truco Beasts, CosmoCrush y Space25 en JavaScript (verificado en los repos).',
+      'Node.js: La Farga usa Fastify sobre Node.js en el backend. Es conocimiento real, aunque la oferta solo pide nivel básico.',
+      'HTML+CSS: maquetación de todas mis interfaces web (Orquesta Elegidos del wireframe a producción, Scubex, portfolio 3D y las pantallas de KnittedForYou a partir de mis propios diseños en Figma).',
+      'Migración de PHP a Angular: PUNTO DÉBIL, no tengo experiencia con PHP. Reconducir hacia lo que sí he hecho: refactorización de código legacy y resolución de cuellos de botella en Kam (.NET/C#) y en GSharp (Django).',
+      'Escalabilidad/arquitectura de componentes: Scubex como SPA por componentes con estado centralizado (MobX) y 137 tests con +90% de cobertura; optimización de carga en el portfolio 3D (209 MB → 45 MB).',
+      'Trabajo en equipo con senior + juniors: experiencia en Click-IT y en proyectos universitarios en grupo (Truco Beasts, uvlhub) con Scrum y Git.',
+      'Big Data / IoT: no tengo experiencia con ninguno de los dos — ser honesto; el puesto es de frontend y mi aportación está ahí.',
+      'Ubicación: la empresa está en Madrid (Wayra, Gran Vía) y yo en Sevilla. Mensaje acordado: disponibilidad para trasladarme según condiciones, con preferencia por teletrabajo/híbrido.',
+    ],
+    adaptacionCV: [
+      'Título del CV cambiado a "Desarrollador Frontend — Angular & JavaScript".',
+      'Color del CV a la marca indicada: naranja (#e2701a, con #b5590b en textos/enlaces para contraste) como acento y azul oscuro (#0f2b4c) en titulares, borde de cabecera y títulos de sección; tags con fondo naranja claro (#fdeedf).',
+      'Resumen reescrito para abrir con frontend, Angular y todo el ecosistema JavaScript (TypeScript, Node.js/Fastify, React, Vite), HTML+CSS, REST APIs y refactorización de código legacy hacia componentes escalables.',
+      'Experiencia de Click-IT reordenada: La Farga (Angular + Node.js) primero, GSharp (Angular) segundo, el bullet de legacy/refactor subido al tercer puesto por la migración de PHP a Angular, y Kam al final.',
+      'KnittedForYou reenfocado a componentes JavaScript con HTML y CSS a partir de mis mockups.',
+      'Proyectos destacados reordenados: Scubex (TypeScript, SPA por componentes) → Orquesta Elegidos (HTML+CSS y TypeScript, cliente real) → Portfolio 3D (TypeScript y optimización) → Todo Jardín (Django, al final, pero destacando catálogo y gestión de productos/pedidos por afinidad con tiendas y almacenes).',
+      'Proyectos de universidad: QuizzieD (JavaScript/TypeScript) y Truco Beasts (interfaz y animaciones) primero, luego Space25/CosmoCrush y uvlhub; se quitó Othello AI (Keras, poco relevante).',
+      'Stack técnico: JavaScript, TypeScript, HTML y CSS primero en lenguajes; Angular, Node.js y Fastify primero en frameworks; Git y REST APIs primero en herramientas; se quitó el tag de Keras.',
+    ],
+    adaptacionCarta: [
+      'La oferta no exige un mínimo de años de experiencia, así que la cover-note no menciona ninguna cifra.',
+      'Se deja claro que la experiencia remunerada arrancó en 2026 — no se oculta.',
+      'Se menciona el interés por crecer dentro de una start-up tecnológica y acompañar al producto a largo plazo, tal y como plantea la oferta.',
+      'Se incluye la disponibilidad para trasladarse según condiciones, con preferencia por teletrabajo/híbrido cuando no sea necesario ir a la oficina.',
+    ],
+    claimsExperiencia: [
+      'DICHO: experiencia real con Angular (La Farga y GSharp en Click-IT), JavaScript/TypeScript, HTML+CSS y Node.js vía Fastify.',
+      'DICHO: refactorización y trabajo sobre código legacy y cuellos de botella.',
+      'NO DICHO: ninguna experiencia con PHP, Big Data ni IoT.',
+      'NO DICHO: ningún número de años de experiencia.',
+    ],
+    notas: 'El CV se generó desde CvModificables/cv-modificable_es.html y se exportó con utils/export-cv.mjs.',
   },
 ];

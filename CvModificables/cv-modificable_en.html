@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>Iván Fernández Limárquez — CV</title>
+<title>Iván Fernández Limárquez — CV Ookla</title>
 <style>
   @page { size: A4 portrait; margin: 0; }
   * { box-sizing: border-box; }
@@ -94,6 +94,21 @@
     font-weight: 600;
     white-space: nowrap;
   }
+  .academic-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 3px; }
+  .academic-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 5px;
+    border: 1px solid #c5d5f1;
+    border-radius: 3px;
+    background: #f4f7fd;
+    font-size: 8pt;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+  .academic-tag strong { color: #0046ad; }
+  .academic-tag span { color: #53627d; font-weight: 600; }
   .skill-line { margin-bottom: 7px; }
   .skill-line b { display: block; font-size: 8.6pt; color: #12233f; margin-bottom: 2px; }
   footer {
@@ -115,7 +130,7 @@
     <img class="photo" src="../CVPlantillas/me.jpg" alt="Iván Fernández Limárquez" />
     <div>
       <h1>Iván Fernández Limárquez</h1>
-      <div class="title">Software Engineer — Full-Stack Support &amp; Maintenance (.NET, Java, JavaScript)</div>
+      <div class="title">Software Engineer — React, TypeScript &amp; Interactive Maps</div>
     </div>
   </div>
   <div class="contact">
@@ -128,11 +143,10 @@
 </header>
 
 <p class="summary">
-  Software Engineering graduate with hands-on full-stack experience in <b>.NET/C#</b>, <b>Java</b>
-  (Spring Boot) and <b>JavaScript</b>, maintaining, refactoring and troubleshooting applications and
-  working with <b>SQL</b> databases (PostgreSQL). Structured, analytical problem-solver with strong
-  customer-facing communication. Bilingual Spanish (native) / English (C1). Fast learner, quick to
-  adapt to new tech stacks and existing codebases.
+  Software Engineering graduate focused on <b>React, TypeScript and interactive mapping</b>.
+  Built a map-first web app with <b>MapLibre GL</b>, MapTiler/OpenStreetMap basemaps, custom
+  bathymetry and GeoJSON overlays. Experienced in REST integrations, PostgreSQL and automated
+  testing (<b>137 unit tests, over 90% coverage</b>). Bilingual Spanish (native) / English (C1).
   <br/>Prefer to explore the CV in 3D? <a href="https://ivanfernandezlimarquez.com">ivanfernandezlimarquez.com</a>
   (<a href="https://github.com/Izshin/webPortfolio">code on Github</a>).
 </p>
@@ -152,16 +166,15 @@
       <div class="item">
         <div class="item-head"><span><a href="https://click-it.es/">Click-IT</a> — Developer</span><span>Barcelona · May - Present</span></div>
         <ul>
-          <li><b>Kam (mesoestetic):</b> international market and competition management suite — built my first backend in <b>.NET/C#</b>, refactoring legacy code and resolving performance bottlenecks across campaigns, targets and catalogue data.</li>
-          <li><b>La Farga:</b> vehicle and parking management for L'Hospitalet (Angular + <b>JavaScript</b>/Fastify), direct client contact.</li>
-          <li><b>GSharp:</b> internal ERP; went deeper into the Django backend (Angular frontend) and integrated Microsoft's Planner API (REST).</li>
+          <li><b>La Farga:</b> contributed to a vehicle and parking-management application for L'Hospitalet using <b>Angular</b> and Fastify, with direct client contact.</li>
+          <li><b>GSharp:</b> worked across an <b>Angular</b> frontend and Django backend, integrating Microsoft Planner through <b>REST APIs</b>.</li>
+          <li><b>Kam (mesoestetic):</b> refactored legacy <b>.NET/C#</b> code and investigated performance bottlenecks in an international market-management suite.</li>
         </ul>
       </div>
       <div class="item">
         <div class="item-head"><span><a href="https://www.facebook.com/knittedforyou/">KnittedForYou</a> — UX/UI &amp; Frontend Design</span><span>Swedish startup · January - March</span></div>
         <ul>
-          <li>Designed every <a href="https://www.figma.com/design/ivY7HPLWbzuRNq33VFGL4U/Knitting-Preview-mock?node-id=199-4858">mockup</a> and the whole user flow in Figma.</li>
-          <li>Implemented several screens as React components.</li>
+          <li>Collaborated directly with the startup's founders on requirements, user flows and <a href="https://www.figma.com/design/ivY7HPLWbzuRNq33VFGL4U/Knitting-Preview-mock?node-id=199-4858">Figma mockups</a>; implemented screens as <b>React</b> components.</li>
         </ul>
       </div>
     </section>
@@ -169,26 +182,19 @@
     <section>
       <h2>Featured projects</h2>
       <div class="item">
-        <div class="item-head">Scubex — Bachelor's Thesis in <b>Java</b></div>
-        <div class="item-sub"><a href="https://scubex.vercel.app/">scubex.vercel.app</a> · <a href="https://github.com/Izshin/Scubex">github.com/Izshin/Scubex</a> · React MobX + Spring Boot + <b>PostgreSQL</b></div>
+        <div class="item-head">Scubex — Interactive maps with <b>MapLibre GL</b></div>
+        <div class="item-sub"><a href="https://scubex.vercel.app/">scubex.vercel.app</a> · <a href="https://github.com/Izshin/Scubex">github.com/Izshin/Scubex</a> · React + TypeScript · MobX · Spring Boot · PostgreSQL</div>
         <ul>
-          <li>Full-stack social network for scuba divers; design, development and deployment (Vercel + Railway).</li>
-          <li><b>REST APIs</b>: Google OAuth 2.0, species detection (GBIF API), dive weather forecasting (Open-Meteo).</li>
-          <li>137 unit tests, +90% code coverage.</li>
-        </ul>
-      </div>
-      <div class="item">
-        <div class="item-head">Todo Jardín — online store</div>
-        <div class="item-sub"><a href="https://jhonpgpi.eu.pythonanywhere.com/">jhonpgpi.eu.pythonanywhere.com</a> · <a href="https://github.com/Izshin/Todo-Jardin-Des">github.com/Izshin/Todo-Jardin-Des</a></div>
-        <ul>
-          <li>Full production e-commerce app for a garden shop: catalog, cart and checkout with the Braintree payment gateway, plus a custom admin panel — built and kept running end to end.</li>
+          <li>Built a custom map with <b>MapLibre GL</b>, using MapTiler styles and OpenStreetMap tiles in a mapping stack comparable to Mapbox, plus a depth-styled bathymetry contour layer.</li>
+          <li>Implemented 64-point <b>GeoJSON</b> scan-radius polygons, location markers, map-click interactions and animated scanning effects.</li>
+          <li>Added debounced viewport-bound updates and <b>Nominatim</b> reverse geocoding; linked selected locations to GBIF species data and Open-Meteo conditions. <b>137 unit tests</b>, over 90% coverage.</li>
         </ul>
       </div>
       <div class="item">
         <div class="item-head">Orquesta Elegidos — Web design and development</div>
-        <div class="item-sub"><a href="https://orquestaelegidos.com/">orquestaelegidos.com</a> · <a href="https://github.com/Izshin/Elegidos">github.com/Izshin/Elegidos</a> · Vite + GitHub Pages</div>
+        <div class="item-sub"><a href="https://orquestaelegidos.com/">orquestaelegidos.com</a> · <a href="https://github.com/Izshin/Elegidos">github.com/Izshin/Elegidos</a> · React + TypeScript + Vite</div>
         <ul>
-          <li>Gathered requirements directly with a real client (a band with 30+ years on stage) and built the site from scratch; self-updating news, Gmail contact form, continuous deployment on GitHub Pages.</li>
+          <li>Designed and built a complete client website from scratch, iterating on the interface and deploying to GitHub Pages.</li>
         </ul>
       </div>
     </section>
@@ -198,12 +204,11 @@
   <div class="col-side">
 
     <section>
-      <h2>University &amp; personal projects</h2>
+      <h2>Data visualisation projects</h2>
       <ul>
-        <li><a href="https://github.com/Izshin/Truco">Truco Beasts</a> — Spring Boot + <b>Java</b> card game (interface and animations).</li>
         <li><a href="https://github.com/Izshin/uvlhub">uvlhub</a> — dockerized Flask project, tests with Selenium and Locust.</li>
-        <li><a href="https://github.com/Izshin/CosmoCrush">CosmoCrush</a> · <a href="https://github.com/Space-Mon-Keys/Frontend">Space25</a> — hackathon projects.</li>
-        <li><a href="https://github.com/Izshin/Othelo-AI-bot">Othello AI</a> — Keras CNN trained through MCTS self-play.</li>
+        <li><a href="https://github.com/Space-Mon-Keys/Frontend">Space25</a> — frontend for an impact-severity tool featuring a 3D globe visualisation.</li>
+        <li><a href="https://github.com/Izshin/QuizzieD">QuizzieD</a> — React + TypeScript trivia app with interactive charts and animations.</li>
       </ul>
     </section>
 
@@ -222,28 +227,29 @@
     <section>
       <h2>Tech stack</h2>
       <div class="skill-line">
-        <b>Languages</b>
-        <div class="tags">
-          <span class="tag">C#</span><span class="tag">Java</span><span class="tag">JavaScript</span>
-          <span class="tag">TypeScript</span><span class="tag">Python</span>
+        <b>Languages · academic experience</b>
+        <div class="academic-tags">
+          <span class="academic-tag"><strong>Python</strong><span>4 years</span></span>
+          <span class="academic-tag"><strong>Java</strong><span>4 years</span></span>
+          <span class="academic-tag"><strong>TypeScript / JavaScript + React</strong><span>3 years</span></span>
+          <span class="academic-tag"><strong>HTML + CSS</strong><span>4 years</span></span>
+          <span class="academic-tag"><strong>C#</strong><span>1 year</span></span>
         </div>
       </div>
       <div class="skill-line">
         <b>Frameworks / libraries</b>
         <div class="tags">
-          <span class="tag">.NET</span><span class="tag">Spring Boot</span><span class="tag">JUnit</span>
-          <span class="tag">React</span><span class="tag">Angular</span><span class="tag">Django</span>
-          <span class="tag">Flask</span><span class="tag">Keras</span><span class="tag">Three.js</span>
-          <span class="tag">R3F</span><span class="tag">Framer Motion</span>
+          <span class="tag">MapLibre GL</span><span class="tag">React</span><span class="tag">GeoJSON</span><span class="tag">MobX</span>
+          <span class="tag">Vite</span><span class="tag">Angular</span><span class="tag">Spring Boot</span>
+          <span class="tag">Django</span><span class="tag">Three.js</span>
         </div>
       </div>
       <div class="skill-line">
         <b>Tools</b>
         <div class="tags">
-          <span class="tag">Git</span><span class="tag">PostgreSQL</span><span class="tag">REST APIs</span>
-          <span class="tag">CI/CD</span><span class="tag">Docker</span><span class="tag">GitHub Actions</span>
-          <span class="tag">OAuth 2.0</span><span class="tag">Vercel</span><span class="tag">Railway</span>
-          <span class="tag">Vite</span><span class="tag">Figma</span><span class="tag">Scrum</span>
+          <span class="tag">MapTiler</span><span class="tag">OpenStreetMap</span><span class="tag">Nominatim</span>
+          <span class="tag">REST APIs</span><span class="tag">PostgreSQL / SQL</span><span class="tag">Unit testing</span>
+          <span class="tag">Figma</span><span class="tag">Git</span><span class="tag">Docker</span>
         </div>
       </div>
     </section>
