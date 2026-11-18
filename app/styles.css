@@ -226,12 +226,12 @@ body.is-detail .app-header { display: none; }
 .filters { display: flex; flex-wrap: wrap; gap: var(--s2); }
 
 .filter-chip {
-  padding: 6px 14px;
-  border-radius: var(--r-pill);
+  padding: 4px 10px;
+  border-radius: 6px;
   background: var(--surface-2);
   border: 1px solid var(--surface-3);
   color: var(--text-dim);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
   cursor: pointer;
   transition: background var(--fast) var(--ease), border-color var(--fast) var(--ease), color var(--fast) var(--ease);
@@ -468,10 +468,10 @@ body.is-detail .app-header { display: none; }
 .badge {
   display: inline-flex;
   align-items: center;
-  gap: var(--s1);
-  padding: 4px 10px;
-  border-radius: var(--r-pill);
-  font-size: 11px;
+  gap: 5px;
+  padding: 2px 7px;
+  border-radius: 6px;
+  font-size: 10px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: .05em;
@@ -481,7 +481,7 @@ body.is-detail .app-header { display: none; }
   backdrop-filter: blur(8px);
 }
 
-.badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--c); }
+.badge::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--c); }
 
 .badge--draft    { --c: var(--st-draft); }
 .badge--sent     { --c: var(--st-sent); }

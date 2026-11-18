@@ -280,4 +280,99 @@ const DEFAULT_OFFERS = [
     ],
     notas: 'Oferta facilitada por el usuario, sin URL. Se envió con el CV base Full-Stack EN sin adaptar. Colores tomados de la paleta de dtn.com: azul #1159af y naranja #f7630c.',
   },
+  {
+    id: 'edicom-software-integrator',
+    titulo: 'Software Integrator (EDI, facturación electrónica y cumplimiento tributario)',
+    empresa: 'EDICOM',
+    modalidad: 'Jornada completa · 20 vacantes · Curso de especialización inicial de ~6 semanas',
+    ubicacion: 'Sevilla, España (también Valencia, Murcia, Vigo, Burgos y Milán)',
+    fechaEnvio: '2026-11-18',
+    estado: 'enviada',
+    color: '#169ec7',
+    color2: '#32373c',
+    url: 'https://careers.edicomgroup.com/ofertacpt/integrador-de-software/',
+    descripcion:
+      'EDICOM es una de las principales empresas de EDI (Electronic Data Interchange) y facturación electrónica del ' +
+      'mundo, con soluciones SaaS que integran el intercambio de datos entre empresas. El puesto consiste en la ' +
+      'integración completa de soluciones SaaS de EDI, facturación electrónica y cumplimiento tributario (VAT ' +
+      'Compliance, eReporting): automatizar conversiones de formatos ERP (IDOC, CSV, XML, JSON) a estándares ' +
+      '(EDIFACT, ODETTE, X12, VDA, Peppol, XML UBL), parametrizar el SaaS y protocolos de comunicación segura (API, ' +
+      'AS2, Web Service, REST, adaptador Java, SFTP, OFTP2), programar en JavaScript según el modelo de integración, ' +
+      'tests funcionales, puesta en producción, formación y soporte al cliente, todo con Scrum (sprints, backlog, ' +
+      'dailies). Empieza con un curso de especialización de ~6 semanas a tiempo completo y tutorizaciones cada tres ' +
+      'meses el primer año. Requisitos: grado en Informática, Teleco o similar (o DAM/DAW), se valoran recién ' +
+      'titulados, inglés B2 mínimo, gran capacidad de trabajo, buena comunicación, expediente académico y permiso ' +
+      'de trabajo en España. Carrera hacia Project Manager, Team Manager o Technical Key Account Manager.',
+    cv: {
+      nombre: 'CV-Ivan-Fernandez_Limarquez_ES.pdf',
+      ruta: '../curriculum_base_pdf/CV-Ivan-Fernandez_Limarquez_ES.pdf',
+      fuente: '../CVPlantillas/cv-template-fullstack.html',
+      idioma: 'Español',
+    },
+    carta: {
+      enviada: true,
+      texto:
+        'Buenas! Soy Iván Fernández. He terminado la carrera de Ingeniería del Software en la Universidad de Sevilla ' +
+        '(media 7,03), así que entro como recién titulado buscando estabilidad y carrera profesional. Tengo inglés C1 ' +
+        'acreditado por el Instituto de Idiomas de la Universidad de Sevilla.\n\n' +
+        'Entre mayo y noviembre de 2026 trabajé como desarrollador en Click-IT. Allí hice cosas muy parecidas a las de ' +
+        'este puesto, desarrollando numerosas funcionalidades en software SaaS.\n\n' +
+        'Conecté un ERP interno con la API de Microsoft Planner e implementé muchas funcionalidades que tocaban ' +
+        'frontend, backend y servicios externos. Trabajé con código legacy en el CRM de un cliente, refactorizando ' +
+        'código existente y resolviendo cuellos de botella. También creé una app de gestión de vehículos prácticamente ' +
+        'desde cero para el cliente La Farga, donde trabajaba con exportaciones a CSV, Excel, PDF...\n\n' +
+        'En conclusión, estoy acostumbrado a trabajar con diversos ERP y CRM y a conectarlos con servicios externos. ' +
+        'Las conversiones de formatos y el tratamiento de datos JSON para pasarlos a otros formatos no son extraños ' +
+        'para mí.\n\n' +
+        'En estas prácticas he usado normalmente TypeScript para todos los frontend y para algunos backend, como ' +
+        'Fastify. También lo he usado en el TFG, así que estoy familiarizado con él.\n\n' +
+        'En cuanto a trabajar por sprints y con Scrum, en la carrera he tenido varias asignaturas, como Proceso ' +
+        'Software y Gestión o Diseño y Pruebas I, donde iterábamos de esta forma y en mis practicas hacíamos dailies ' +
+        'para revisar que hacíamos periódicamente\n\n' +
+        'En mis prácticas, al desarrollar una app casi desde cero e integrar tantas funcionalidades en el ERP interno ' +
+        'de la empresa, hacía constantemente tests funcionales de todo lo que subía. Además, tengo experiencia ' +
+        'demostrable en testing con mi TFG y con pruebas en Selenium y Locust en otro proyecto.\n\n' +
+        'En cuanto a la puesta en producción, he hecho varios despliegues con GitHub Actions y Docker en la ' +
+        'universidad. Además, mantengo mi TFG desplegado y gestiono el dominio de mi web de portfolio.\n\n' +
+        'Todavía no conozco formatos EDI como EDIFACT o X12 ni protocolos como AS2 u OFTP2, y por eso me atrae el ' +
+        'curso de especialización inicial, aprendo rápido en Click-IT pasé por Angular, Node.js, Django y .NET en ' +
+        'pocos meses.',
+    },
+    tecnologias: [
+      'EDI', 'Facturación electrónica', 'JavaScript', 'XML', 'JSON', 'CSV', 'IDOC', 'EDIFACT', 'X12', 'Peppol / XML UBL',
+      'APIs REST / Web Services', 'AS2 / SFTP / OFTP2', 'Testing funcional', 'Scrum', 'Inglés B2+',
+    ],
+    puntosEntrevista: [
+      'Perfil: valoran recién titulados que busquen estabilidad y carrera profesional — es exactamente mi caso (graduado en junio de 2026). Hay sede en Sevilla.',
+      'JavaScript: Angular (TypeScript) y Node.js/Fastify en La Farga (Click-IT); proyectos propios en TypeScript (Scubex, Orquesta Elegidos, portfolio 3D) y JavaScript (Truco Beasts, CosmoCrush, Space25).',
+      'Integraciones y APIs: API de Microsoft Planner en GSharp (Click-IT); OAuth 2.0, GBIF y Open-Meteo en Scubex. Intercambio de datos en JSON entre sistemas.',
+      'Transformación de datos: lo más cercano es mapear datos entre APIs externas, backend y frontend. EDIFACT, X12, ODETTE, VDA, Peppol e IDOC son PUNTO DÉBIL: no los he usado, y para eso está el curso de 6 semanas.',
+      'Protocolos AS2, SFTP y OFTP2: no los he configurado. Ser honesto; sí conozco REST, OAuth 2.0 y despliegues en la nube.',
+      'Testing: 137 tests unitarios y +90% de cobertura en Scubex; Selenium y Locust en uvlhub. Encaja con los tests funcionales previos a la puesta en marcha.',
+      'Cliente y soporte: trato directo con el cliente en La Farga (Click-IT), KnittedForYou (requisitos con los fundadores) y Orquesta Elegidos (cliente real, desde cero). Útil para formación, soporte y toma de requisitos.',
+      'Scrum: sprints, dailies y backlog en Click-IT y en proyectos universitarios — encaja con cómo organizan el trabajo.',
+      'Código legacy y cuellos de botella: refactorización en Kam (.NET/C#) en Click-IT.',
+      'Idiomas: inglés C1 acreditado; no tengo ninguno de los otros idiomas que valoran.',
+      'Permiso de trabajo a jornada completa en España: confirmar antes de la entrevista (no se mencionó en el formulario).',
+      'Carrera: les interesa la proyección (Project Manager, Team Manager, Technical Key Account Manager). Mostrar interés en crecer a largo plazo.',
+    ],
+    adaptacionCV: [
+      'CV SIN MODIFICAR: se envió el CV base Full-Stack en español (curriculum_base_pdf/CV-Ivan-Fernandez_Limarquez_ES.pdf), sin adaptarlo a la oferta.',
+    ],
+    adaptacionCarta: [
+      'Carta redactada por el usuario y enviada con la candidatura.',
+      'La oferta no exige un mínimo de años, así que no se menciona ninguna cifra.',
+      'Se mencionan Click-IT (mayo–noviembre 2026) y el cliente La Farga por su nombre; el ERP interno y el CRM del cliente se describen sin nombrarlos.',
+      'Se enlaza la experiencia con el puesto: integración de ERP/CRM con servicios externos, exportaciones a CSV/Excel/PDF y conversión de datos JSON a otros formatos.',
+      'Scrum justificado con asignaturas (Proceso Software y Gestión, Diseño y Pruebas I) y las dailies de las prácticas.',
+      'Se reconoce que no conozco EDIFACT, X12, AS2 ni OFTP2 y se reconduce hacia el curso de especialización inicial.',
+    ],
+    claimsExperiencia: [
+      'DICHO: graduado en Ingeniería del Software (nota media 7,03), inglés C1, Click-IT mayo–noviembre 2026 (funcionalidades SaaS, ERP interno conectado con la API de Microsoft Planner, código legacy y cuellos de botella en el CRM de un cliente, app de gestión de vehículos casi desde cero para La Farga con exportaciones a CSV/Excel/PDF, tests funcionales, dailies).',
+      'DICHO: TypeScript en frontends y en backends con Fastify y en el TFG; conversión de datos JSON a otros formatos; Scrum en asignaturas (Proceso Software y Gestión, Diseño y Pruebas I); testing en el TFG y con Selenium y Locust; despliegues con GitHub Actions y Docker; TFG desplegado y dominio del portfolio; Angular, Node.js, Django y .NET.',
+      'NO DICHO: experiencia con formatos EDI (EDIFACT, ODETTE, X12, VDA, Peppol, XML UBL, IDOC), protocolos AS2/SFTP/OFTP2, facturación electrónica ni cumplimiento tributario.',
+      'NO DICHO: permiso de trabajo (no estaba confirmado) ni idiomas aparte de español e inglés.',
+    ],
+    notas: 'Oferta de la web de empleo de EDICOM. Se envió con el CV base Full-Stack ES sin adaptar. Colores: azul de edicomgroup.es (#169ec7) y gris oscuro de su web de empleo (#32373c).',
+  },
 ];
