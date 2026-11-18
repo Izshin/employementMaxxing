@@ -134,7 +134,7 @@ ingeniería de requisitos, traduciendo esas necesidades en aplicaciones y featur
 
 ### Experiencia profesional
 
-**Click-IT — Desarrollador** · Barcelona, España · Mayo 2026 - Actualidad
+**Click-IT — Desarrollador** · Barcelona, España · Mayo 2026 - Noviembre 2026
 - La Farga: gestión de vehículos y aparcamiento para L'Hospitalet, con Angular y Fastify,
   trato directo con el cliente.
 - GSharp: CRM interno de la propia Click-IT; profundicé en el backend de Django (el

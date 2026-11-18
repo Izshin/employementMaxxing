@@ -11,529 +11,273 @@ const ESTADOS = [
 
 const DEFAULT_OFFERS = [
   {
-    id: 'ofimatica-frontend',
-    titulo: 'Desarrollador/a Front-End — Diseño y maquetación (R&D)',
-    empresa: 'OFIMÁTICA',
-    modalidad: 'Teletrabajo · Flexibilidad horaria',
-    ubicacion: 'España · Oficinas en Jaén, Madrid y Málaga (sede del puesto no indicada)',
-    fechaEnvio: '',
-    estado: 'preparando',
-    color: '#ed2a4d',
-    color2: '#181818',
-    url: '',
-    descripcion:
-      'OFIMÁTICA, fundada en 1981, desarrolla software vertical para hoteles, agencias de viajes, ' +
-      'touroperadores y receptivos, restaurantes y comercio, además de autobuses, estéticas y centros ' +
-      'de formación. Cuenta con más de 30 programas y ha informatizado más de 17.000 empresas. Desde ' +
-      '2019 forma parte de CSI a través de TSS. Según la oferta, reúne 70 profesionales, con oficinas ' +
-      'en Jaén, Madrid y Málaga y presencia en España y Latinoamérica. Busca incorporar un perfil ' +
-      'al departamento de R&D para gestionar, diseñar y maquetar el Front-End de varios proyectos ' +
-      'simultáneos, en equipo con programadores, Quality Tester y Product Owner. Requisitos: grado ' +
-      'o FP superior; HTML (HTML5 deseable), CSS, SASS, Bootstrap 3 o 4, JavaScript, XSLT y maquetación ' +
-      'sin framework; resolución de problemas con algoritmia y patrones de diseño, y metodologías ' +
-      'Agile (SCRUM). Ofrece flexibilidad horaria, teletrabajo y formaciones internas. No se indican ' +
-      'salario, tipo de contrato ni mínimo de años de experiencia.',
-    cv: {
-      nombre: 'Ivan-Fernandez-Limarquez-CV-Ofimatica.pdf',
-      ruta: '../curriculum_mod_pdf/Ivan-Fernandez-Limarquez-CV-Ofimatica.pdf',
-      fuente: '../CvModificables/cv-modificable_es.html',
-      idioma: 'Español',
-    },
-    carta: {
-      enviada: false,
-      texto:
-        'Hola, equipo de OFIMÁTICA:\n\n' +
-        'Soy Iván Fernández Limárquez, graduado en Ingeniería del Software por la Universidad de ' +
-        'Sevilla, especializado en frontend y diseño UX. Me interesa vuestro puesto de diseño y ' +
-        'maquetación en R&D por la combinación de interfaces, software de gestión y trabajo en equipo.\n\n' +
-        'En Click-IT desarrollo aplicaciones con Angular, HTML/CSS y JavaScript/TypeScript: La Farga ' +
-        '(gestión de vehículos y aparcamiento, con trato directo con el cliente) y GSharp (CRM interno). ' +
-        'También he trabajado en Kam, software de gestión de mercados, refactorizando código legacy ' +
-        'y resolviendo cuellos de botella. En KnittedForYou diseñé mockups y flujos de usuario en Figma ' +
-        'e implementé pantallas React. Para Orquesta Elegidos recogí requisitos con la banda, cliente ' +
-        'real, y diseñé y desarrollé su web desde cero.\n\n' +
-        'Mis proyectos incluyen Todo Jardín, una tienda Django con plantillas HTML y CSS, y Scubex, ' +
-        'una aplicación full-stack con 137 tests unitarios y más del 90% de cobertura. Aporto una base ' +
-        'de HTML, CSS y JavaScript, Scrum como práctica de trabajo y aprendizaje rápido. SASS, ' +
-        'Bootstrap 3/4 y XSLT son tecnologías en las que tendría que formarme; no las presento como ' +
-        'experiencia previa. Mis proyectos con React o Angular tampoco equivalen a acreditar ' +
-        'maquetación sin framework.\n\n' +
-        'Resido en Sevilla y valoro el teletrabajo, la formación interna y la oportunidad de contribuir ' +
-        'a soluciones útiles para sectores como comercio y turismo.\n\n' +
-        'Gracias por vuestro tiempo.\nIván Fernández Limárquez',
-    },
-    tecnologias: [
-      'HTML', 'HTML5 (deseable)', 'CSS', 'SASS', 'Bootstrap 3/4', 'JavaScript', 'XSLT',
-      'Maquetación sin framework', 'Algoritmia', 'Patrones de diseño', 'Agile', 'Scrum',
-    ],
-    puntosEntrevista: [
-      'HTML/CSS y diseño: Orquesta Elegidos, del wireframe a producción con requisitos de la banda; KnittedForYou, mockups y flujo de usuario en Figma antes de implementar pantallas.',
-      'JavaScript: Truco Beasts tiene frontend JavaScript (React); Angular en Click-IT y Scubex, Orquesta Elegidos y portfolio usan TypeScript, dentro del ecosistema JavaScript.',
-      'Maquetación sin framework: Todo Jardín usa Django con plantillas HTML y CSS; es el ejemplo más próximo, no una prueba de experiencia sin framework o sin librerías CSS. No afirmar que los proyectos React/Angular cumplen ese requisito.',
-      'SASS, Bootstrap 3/4 y XSLT: no constan en el historial. No afirmar dominio ni experiencia; explicar la base HTML/CSS/JavaScript y la disposición a formarse. HTML5 específico tampoco está documentado por separado.',
-      'Algoritmia: preparar el caso Othello AI, búsqueda MCTS y evaluación de posiciones con CNN; para problemas de rendimiento, refactorización y cuellos de botella de Kam en Click-IT.',
-      'Patrones de diseño: no consta experiencia explícita con patrones concretos. Preparar solo ejemplos verificables del código propio; no atribuir patrones ni experiencia formal sin comprobarlos.',
-      'Scrum y colaboración: Scrum consta en el stack; Truco Beasts se desarrolló entre seis personas. No inventar experiencia previa con los roles Quality Tester o Product Owner.',
-      'Software de gestión: La Farga, GSharp y Kam en Click-IT; Todo Jardín incluye catálogo, pedidos y panel de administración, relevante al sector comercio de OFIMÁTICA.',
-      'Grado en Ingeniería del Software: Universidad de Sevilla, junio de 2026. Inglés C1. La oferta no exige un mínimo de años de experiencia.',
-      'Condiciones pendientes: confirmar alcance del teletrabajo, sede de referencia, salario y contrato; la oferta solo indica flexibilidad horaria, teletrabajo y formaciones internas.',
-    ],
-    adaptacionCV: [
-      'Título: Desarrollador Frontend — Maquetación & UX. Resumen centrado en HTML/CSS, JavaScript/TypeScript, diseño de interfaces y Scrum.',
-      'Misma estructura y medidas de la plantilla española; rojo de la captura de OFIMÁTICA (#ed2a4d) en bordes, rojo oscuro (#c51d3a) en textos y enlaces para contraste, negro (#181818) en titulares y rosa claro (#fff0f3) en tags. Ficha de la app en rojo y negro.',
-      'Click-IT: La Farga, GSharp y Kam como aplicaciones de gestión; refactorización y cuellos de botella vinculados expresamente a Kam. GSharp identificado como CRM, según el contexto.',
-      'KnittedForYou: requisitos, mockups y flujo de usuario antes de la implementación de pantallas con HTML/CSS.',
-      'Proyectos: Orquesta Elegidos (diseño y maquetación) → Todo Jardín (plantillas HTML y comercio) → Scubex (interfaz y tests) → Portfolio 3D (interacción y rendimiento).',
-      'HTML/CSS integrados de forma natural en los títulos de Orquesta Elegidos y Todo Jardín; sin presentar TypeScript como una tecnología solicitada expresamente.',
-      'Proyectos personales: Truco Beasts (JavaScript e interfaz), Othello AI (algoritmia), QuizzieD (animaciones) y uvlhub (tests).',
-      'Stack: HTML, CSS y JavaScript primero; Figma, Scrum y Git al inicio de herramientas. No se añaden tecnologías no acreditadas.',
-      'Carta guardada por separado en la app para conservar la estructura de la plantilla y el CV de una página A4.',
-    ],
-    adaptacionCarta: [
-      'Carta específica para R&D y software de gestión, con ejemplos de Click-IT, KnittedForYou y Orquesta Elegidos.',
-      'Sin cifras de años de experiencia, ya que la oferta no exige un mínimo.',
-      'Distingue tecnologías acreditadas de SASS, Bootstrap y XSLT, y no equipara React/Angular con maquetación sin framework.',
-      'Menciona residencia en Sevilla e interés por teletrabajo y formación; no inventa disponibilidad para trasladarse.',
-    ],
-    claimsExperiencia: [
-      'DICHO: grado, HTML/CSS, ecosistema JavaScript/TypeScript, diseño UX/Figma, Scrum y software de gestión.',
-      'DICHO: trato con cliente en Click-IT (La Farga) y Orquesta Elegidos (la banda); código legacy y cuellos de botella en Kam.',
-      'DICHO: Todo Jardín con plantillas HTML y CSS; Othello AI con búsqueda MCTS y CNN; Scubex con 137 tests y más del 90% de cobertura.',
-      'NO DICHO: experiencia con SASS, Bootstrap 3/4, XSLT, patrones de diseño concretos ni maquetación sin framework acreditada.',
-      'NO DICHO: años de experiencia, salario, contrato, 100% remoto o experiencia previa como Quality Tester/Product Owner.',
-    ],
-    notas:
-      'Oferta facilitada por el usuario, sin URL; colores tomados de la captura de su web. Registrada como Preparando, no enviada. ' +
-      'CV adaptado en CvModificables/cv-modificable_es.html y exportado con utils/export-cv.mjs. ' +
-      'El snapshot contiene la misma oferta; importar estado/estado-y-configuracion.json si la app ya tiene datos en localStorage.',
-  },
-  {
-    id: 'deloitte-react-node',
-    titulo: 'Full Stack Developer (React + Node.js + GCP)',
-    empresa: 'Deloitte',
-    modalidad: 'Híbrido flexible',
-    ubicacion: 'Sevilla, España (preferencia)',
-    fechaEnvio: '',
-    estado: 'preparando',
-    color: '#86bc25',
-    url: '',
-    descripcion:
-      'Deloitte busca un/a profesional para proyectos tecnológicos de alto impacto, desarrollando ' +
-      'aplicaciones web modernas tanto en frontend como en backend. Piden React/React.js, Node.js, ' +
-      'Google Cloud Platform (GCP), REST APIs/arquitecturas orientadas a servicios, Git y metodologías ' +
-      'ágiles. Se valora TypeScript, Docker/CI-CD, SQL/NoSQL y entornos cloud/microservicios. ' +
-      'Condiciones: horario flexible, híbrido (oficina/cliente/teletrabajo), teambuildings, bienestar ' +
-      'integral, voluntariados y plan de retribución flexible.',
-    cv: {
-      nombre: 'Ivan-Fernandez-Limarquez-CV-Deloitte.pdf',
-      ruta: '../curriculum_mod_pdf/Ivan-Fernandez-Limarquez-CV-Deloitte.pdf',
-      fuente: '../CvModificables/cv-modificable_es.html',
-      idioma: 'Español',
-    },
-    carta: {
-      enviada: false,
-      texto:
-        'Nota de presentación integrada en el propio CV (bloque "cover-note"):\n\n' +
-        '"Aunque mi experiencia laboral remunerada arrancó en 2026, llevo programando de forma continua ' +
-        'entre proyectos universitarios altamente enfocados al código y a la simulación de clientes ' +
-        'reales, hackathones (CosmoCrush, Space25) y prácticas/colaboraciones freelance (KnittedForYou), ' +
-        'además de mi puesto actual en Click-IT, donde trabajo tanto en frontend con React como en ' +
-        'backend con Node.js. Actualmente resido en Sevilla y busco continuar mi carrera profesional en ' +
-        'esta ciudad."',
-    },
-    tecnologias: [
-      'React', 'Node.js', 'Google Cloud Platform', 'REST APIs', 'Git', 'Scrum',
-      'TypeScript', 'Docker', 'CI/CD', 'SQL',
-    ],
-    puntosEntrevista: [
-      'La Farga (Click-IT): mi caso real de Node.js en producción (Fastify), además de Angular en frontend. Es el ancla de la parte Node.js.',
-      'React: Scubex, Orquesta Elegidos, el portfolio 3D y componentes de KnittedForYou. Cubre de sobra el requisito de React/React.js.',
-      'REST APIs: OAuth 2.0 con Google, GBIF y Open-Meteo en Scubex; integración de la API REST de Microsoft Planner en GSharp. Sé diseñar y consumir APIs, no solo consumirlas.',
-      'GCP: PUNTO DÉBIL, no tengo experiencia directa. Reconducir hacia despliegues cloud reales (Vercel, Railway, PythonAnywhere) y disposición a aprenderlo rápido. NO decir que lo domino.',
-      'TypeScript: QuizzieD (React + TypeScript) y el portfolio 3D. Cubre el "se valorará".',
-      'Docker: uvlhub, completamente dockerizado. CI/CD: GitHub Actions en varios proyectos.',
-      'SQL/NoSQL: PostgreSQL con soltura (Scubex, Railway). NoSQL no lo he tocado — ser honesto si preguntan.',
-      'Microservicios: no tengo experiencia formal con arquitecturas de microservicios; hablar de servicios REST independientes (GSharp, Scubex) como lo más cercano.',
-      'Git y ágil: uso diario de Git, y Scrum en el grado y en Click-IT.',
-    ],
-    adaptacionCV: [
-      'Título del CV cambiado a "Ingeniero de Software — Full Stack (React & Node.js)".',
-      'Color del CV a la marca real de Deloitte: verde oscuro (#046a38) como acento (bordes, títulos, enlaces) y verde claro (#e2f3e6) de fondo en los tags.',
-      'Resumen reescrito para abrir con React, Node.js, REST APIs y Git/Scrum en equipos ágiles.',
-      'Experiencia de Click-IT: La Farga (Node.js/Fastify) primero, GSharp (REST API) segundo, Kam y .NET después.',
-      'Proyectos destacados reordenados: Scubex (React) → Orquesta Elegidos (React) → Portfolio 3D (React) → Todo Jardín (Django, al final por ser el menos relevante aquí).',
-      'Proyectos de universidad: QuizzieD (React + TypeScript) y Truco Beasts (React) primero; uvlhub destacando Docker en vez de Python; se quitó Othello AI (Keras/Python, poco relevante).',
-      'Stack técnico: JavaScript/TypeScript primero en lenguajes; React y Fastify primero en frameworks; REST APIs, Git y Scrum primero en herramientas.',
-      'Cover-note sin cifra de años (la oferta no exige un mínimo), y añadida la preferencia explícita por trabajar en Sevilla.',
-    ],
-    adaptacionCarta: [
-      'La oferta no exige un mínimo de años de experiencia, así que la nota no menciona ninguna cifra.',
-      'Se deja claro que la experiencia remunerada arranca en 2026 — no se oculta.',
-      'Se añade explícitamente la preferencia por continuar la carrera en Sevilla, tal y como se pidió.',
-    ],
-    claimsExperiencia: [
-      'DICHO: experiencia real con React (varios proyectos) y Node.js/Fastify (La Farga).',
-      'DICHO: preferencia por trabajar en/desde Sevilla.',
-      'NO DICHO: ninguna experiencia con Google Cloud Platform, NoSQL ni arquitecturas de microservicios formales.',
-    ],
-    notas: 'El CV se generó desde CvModificables/cv-modificable_es.html y se exportó con utils/export-cv.mjs.',
-  },
-  {
-    id: 'profile-angular-python',
-    titulo: 'Desarrollador/a Junior (Angular + Python)',
-    empresa: 'Profile',
-    modalidad: 'Remoto · Contrato indefinido',
-    ubicacion: 'España (100% remoto)',
-    fechaEnvio: '',
-    estado: 'preparando',
-    color: '#f2c94c',
-    url: '',
-    descripcion:
-      'Consultora tecnológica que busca desarrolladores/as Junior con experiencia en Angular y Python ' +
-      'para incorporarse a un proyecto estable en remoto. Piden más de 1 año de experiencia en desarrollo, ' +
-      'con capacidad para desenvolverse tanto en tareas frontend como backend. Condiciones: contrato ' +
-      'indefinido, salario competitivo, flexibilidad horaria, vacaciones adicionales por antigüedad, ' +
-      'formación a medida y retribución flexible.',
-    cv: {
-      nombre: 'Ivan-Fernandez-Limarquez-CV-Profile.pdf',
-      ruta: '../curriculum_mod_pdf/Ivan-Fernandez-Limarquez-CV-Profile.pdf',
-      fuente: '../CvModificables/cv-modificable_es.html',
-      idioma: 'Español',
-    },
-    carta: {
-      enviada: false,
-      texto:
-        'Nota de presentación integrada en el propio CV (bloque "cover-note"):\n\n' +
-        '"Llevo 6 meses de experiencia laboral remunerada (en Click-IT, desde mayo de 2026), pero sumo más ' +
-        'de 3 años programando de forma continua entre proyectos universitarios altamente enfocados al ' +
-        'código y a la simulación de clientes reales, hackathones (CosmoCrush, Space25) y ' +
-        'prácticas/colaboraciones freelance (KnittedForYou), trabajando tanto con Angular (frontend) como ' +
-        'con Python/Django (backend)."',
-    },
-    tecnologias: [
-      'Angular', 'Python', 'Django', 'JavaScript', 'TypeScript', 'REST APIs',
-      'Desarrollo frontend', 'Desarrollo backend', 'Git',
-    ],
-    puntosEntrevista: [
-      'La Farga (Click-IT): mi caso real de Angular en producción (gestión de vehículos y aparcamiento para L\'Hospitalet), con trato directo con el cliente. Es el ancla de la parte Angular.',
-      'GSharp (Click-IT): backend en Python/Django con integración de la API REST de Microsoft Planner. Es el ancla de la parte Python.',
-      'Todo Jardín: proyecto Django end-to-end propio (catálogo, carrito, checkout con Braintree, panel admin), demuestra Python fuera del trabajo también.',
-      'uvlhub y Othello AI: dos proyectos personales más en Python (Flask dockerizado y CNN en Keras), útiles si preguntan por proyectos fuera del trabajo.',
-      'Full stack: Kam (.NET/C#) y Scubex (Spring Boot) muestran soltura en backend en general, no solo Python.',
-      'Frontend más allá de Angular: React en Scubex, Orquesta Elegidos y el portfolio 3D, por si preguntan por otros frameworks.',
-      'Años de experiencia: 6 meses de experiencia laboral real en Click-IT (desde mayo 2026), pero más de 3 años programando entre universidad, hackathones y freelance (KnittedForYou). Ser transparente sobre esta distinción si preguntan.',
-      'Perfil junior: mostrar ganas de aprender y trabajar en equipo, tal y como pide la oferta, sin sobrevender experiencia.',
-    ],
-    adaptacionCV: [
-      'Título del CV cambiado a "Ingeniero de Software — Full Stack (Angular & Python)".',
-      'Color del CV con la marca real de Profile: navy (#14294d) como color principal (bordes, títulos, enlaces) y amarillo suave (#fbe8a6) como color secundario en los tags del stack técnico.',
-      'Resumen reescrito para abrir con frontend/backend, Angular y Python (Django), y REST APIs.',
-      'Experiencia de Click-IT reordenada: La Farga (Angular) primero, GSharp (Angular + Python/Django) segundo, Kam y .NET después.',
-      'Proyectos destacados: se mantiene Todo Jardín (Django) primero por ser el proyecto Python más completo.',
-      'Proyectos de universidad reordenados: uvlhub y Othello AI (ambos Python) primero, luego Truco Beasts y hackathones.',
-      'Stack técnico: Angular movido al principio de frameworks, justo antes de Django.',
-      'Cover-note ajustada para distinguir "6 meses de experiencia laboral real" (Click-IT) de "más de 3 años" programando entre universidad y proyectos, mencionando explícitamente Angular y Python/Django.',
-    ],
-    adaptacionCarta: [
-      'La oferta exige más de 1 año de experiencia; la nota distingue "6 meses" de experiencia laboral real y "más de 3 años" contando universidad y proyectos, cifra que cubre de sobra el mínimo pedido.',
-      'Se deja claro que la experiencia remunerada arranca en 2026 — no se oculta.',
-      'Se nombra a Click-IT como puesto actual donde se usan ambas tecnologías pedidas (Angular y Python/Django).',
-    ],
-    claimsExperiencia: [
-      'DICHO: experiencia real con Angular (La Farga) y Python/Django (GSharp, Todo Jardín).',
-      'DICHO: "6 meses" de experiencia laboral real (Click-IT, desde mayo 2026) y "más de 3 años" programando entre universidad, hackathones y freelance. Verificable y desglosable si preguntan.',
-      'NO DICHO: ninguna cifra de años de experiencia laboral remunerada distinta de los 6 meses reales en Click-IT.',
-    ],
-    notas: 'El CV se generó desde CvModificables/cv-modificable_es.html y se exportó con utils/export-cv.mjs.',
-  },
-  {
-    id: 'scalian-fullstack',
-    titulo: 'Full Stack Developer (React + Django)',
-    empresa: 'Scalian Spain',
-    modalidad: 'Remoto · Contrato indefinido',
-    ubicacion: 'España (100% teletrabajo)',
-    fechaEnvio: '',
+    id: 'hasten-arquitecto-fullstack',
+    titulo: 'Arquitecto/a de Software Full Stack (Vue.js + Node.js + Oracle)',
+    empresa: 'Grupo Hasten',
+    modalidad: 'Presencial en oficinas del cliente · Contrato indefinido',
+    ubicacion: 'Sevilla, España',
+    fechaEnvio: '2026-11-18',
     estado: 'enviada',
-    color: '#e2007a',
-    url: '',
+    color: '#e63727',
+    color2: '#595959',
+    url: 'https://www.grupohasten.com/',
     descripcion:
-      'Grupo internacional (+6.000 personas en Europa y Norteamérica) con servicios de Data, Cloud e IA. ' +
-      'Buscan un Full Stack Developer para una aplicación de visualización y presentación de datos científicos: ' +
-      'recoger requisitos funcionales y de negocio, desarrollar con React + Django, diseñar y mantener REST APIs, ' +
-      'cuidar UI responsive/UX, modelar datos, montar CI/CD y trabajar con equipos científicos y stakeholders ' +
-      'dentro del ecosistema Azure. Piden mínimo 3 años de experiencia e inglés B2+. ' +
-      'Condiciones: teletrabajo, indefinido, 25 días de vacaciones, horario flexible y formación continua.',
+      'Consultora de Transformación Digital y Reclutamiento IT. Buscan un/a Arquitecto/a de Software Full Stack ' +
+      'para un proyecto de migración, modernización y evolución de aplicaciones: diseñar la arquitectura técnica, ' +
+      'desarrollar frontend con Vue.js + Vuetify y backend con Node.js, diseñar e integrar APIs REST, optimizar ' +
+      'consultas en Oracle y analizar funcionalidad existente en Java para migrarla. Piden mínimo 3 años full-stack, ' +
+      'al menos 2 años definiendo arquitecturas, residencia en Sevilla y presencialidad. Se valora CMS, CA Service ' +
+      'Desk Manager y Redis. Condiciones: 26.000–30.000 € brutos/año, indefinido, jornada completa, 23 días de ' +
+      'vacaciones y formación IT/idiomas.',
     cv: {
-      nombre: 'CV_IFL_Scalian.pdf',
-      ruta: '../curriculum_mod_pdf/CV_IFL_Scalian.pdf',
-      fuente: '../CvModificables/cv-modificable_es.html',
+      nombre: 'CV-Ivan-Fernandez_Limarquez_ES.pdf',
+      ruta: '../curriculum_base_pdf/CV-Ivan-Fernandez_Limarquez_ES.pdf',
+      fuente: '../CVPlantillas/cv-template-fullstack.html',
       idioma: 'Español',
     },
     carta: {
       enviada: true,
       texto:
-        'Nota de presentación integrada en el propio CV (bloque "cover-note"):\n\n' +
-        '"Aunque mi experiencia laboral remunerada arrancó en 2026, sumo más de 3 años programando entre ' +
-        'proyectos universitarios altamente enfocados al código y a la simulación de clientes reales, hackathones ' +
-        '(CosmoCrush, Space25) y prácticas/colaboraciones freelance (KnittedForYou), además de mi puesto actual en Click-IT."',
+        'Asunto: Candidatura – Arquitecto/a de Software Full Stack (Sevilla)\n\n' +
+        'Estimado equipo de Grupo Hasten:\n\n' +
+        'Me gustaría presentar mi candidatura al puesto de Arquitecto de Software Full Stack. Vivo en Sevilla y tengo ' +
+        'plena disponibilidad para trabajar de forma presencial en las oficinas del cliente.\n\n' +
+        'Soy graduado en Ingeniería del Software por la Universidad de Sevilla y llevo más de 3 años desarrollando ' +
+        'full-stack. Esa experiencia viene de proyectos universitarios muy centrados en el código, de hackathons y de ' +
+        'mi etapa como desarrollador en Click-IT. Allí trabajé con Node.js (Fastify) y Angular para el cliente La ' +
+        'Farga. También refactoricé código legacy y monté un backend en .NET para Kam (mesoestetic), una experiencia ' +
+        'muy cercana a la migración que plantean.\n\n' +
+        'Tengo 4 años de experiencia con Java/Spring Boot, lo que me permite interpretar con soltura funcionalidad ' +
+        'existente, y trabajo con APIs REST y SQL (PostgreSQL). En mi TFG, Scubex, diseñé la arquitectura completa ' +
+        'de una aplicación full-stack, desde el frontend en React hasta el despliegue en la nube, con más del 90 % de ' +
+        'cobertura de tests.\n\n' +
+        'Aún no he trabajado con Vue.js ni con Oracle. Aun así, domino frameworks de componentes como React y Angular, ' +
+        'y me adapto rápido a stacks nuevos. Me encantaría hablar con ustedes sobre cómo podría aportar al proyecto.\n\n' +
+        'Un cordial saludo,\n' +
+        'Iván Fernández Limárquez\n' +
+        'Sevilla · +34 659 996 468 · ivaferlimjob@gmail.com',
     },
     tecnologias: [
-      'ReactJS', 'Python', 'Django', 'Node.js / Fastify', 'REST APIs', 'Azure / Azure Stack',
-      'SQL · PostgreSQL', 'Git & CI/CD', 'Linux', 'Data visualization', 'Inglés B2+',
+      'Vue.js', 'Vuetify', 'Node.js', 'APIs REST', 'Oracle', 'SQL', 'Java', 'Arquitectura de software',
+      'Migración / modernización', 'CMS (valorable)', 'CA SDM (valorable)', 'Redis (valorable)',
     ],
     puntosEntrevista: [
-      'GSharp (Click-IT): es MI caso real de Django + integración de la API REST de Microsoft Planner. Es el ancla de la parte Python/Django.',
-      'Todo Jardín: segundo proyecto Django end-to-end (catálogo, carrito, checkout con Braintree, panel admin propio). Lo puse el primero de la lista por eso.',
-      'React: Scubex (React + MobX), Orquesta Elegidos (React + Vite) y el portfolio 3D (React 19 + Three.js + R3F). Para "data visualization" tira del portfolio 3D y de la optimización 209 MB → 45 MB.',
-      'REST APIs: OAuth 2.0 con Google, GBIF (especies) y Open-Meteo en Scubex. Sé diseñar y consumir APIs, no solo consumirlas.',
-      'Node.js: viene de La Farga (Angular + Fastify). Si preguntan por Express, decir claramente que mi experiencia es con Fastify.',
-      'CI/CD: GitHub Actions, despliegues en Vercel/Railway y CD en GitHub Pages. Docker en uvlhub.',
-      'Azure: PUNTO DÉBIL. No tengo experiencia directa con Azure. Reconducir hacia Azure DevOps/Git, despliegues cloud (Vercel, Railway, PythonAnywhere) y disposición a aprenderlo rápido. NO decir que lo domino.',
-      'Snowflake / dbt / Databricks y sector farma/biotech: no los tengo. Tratarlos como "valorable" y ser honesto.',
-      'Linux: uso habitual con Docker y despliegues; no vender administración de sistemas.',
-      'Calidad: 137 tests unitarios y +90% de cobertura en Scubex. Buen argumento para producto científico donde el dato no puede fallar.',
-      'Inglés C1 acreditado (Instituto de Idiomas, Univ. de Sevilla) — cubre el B2+ que piden.',
+      'Presencialidad y Sevilla: vivo en Sevilla y busco precisamente un puesto presencial. Es un requisito eliminatorio, así que dejarlo claro desde el principio.',
+      'Migración/modernización: Kam (mesoestetic) en Click-IT — refactoricé bastante código existente y monté un backend .NET/C# lidiando con cuellos de botella y código legacy. Es el ancla de la parte de migración.',
+      'Node.js: La Farga (Click-IT) usa Fastify sobre Node.js en el backend, con Angular en el frontend y trato directo con el cliente. Si preguntan por Express, aclarar que mi experiencia es con Fastify.',
+      'Java: 4 años con Java (Spring Boot en Scubex y Truco Beasts). Argumento: puedo leer e interpretar funcionalidad existente en Java para migrarla.',
+      'SQL: PostgreSQL en Scubex. Oracle es PUNTO DÉBIL: no lo he usado; reconducir hacia SQL relacional y disposición a aprender sus particularidades (PL/SQL, optimización).',
+      'Vue.js/Vuetify: PUNTO DÉBIL, no lo he usado. Reconducir hacia React (Scubex, Elegidos, portfolio) y Angular (La Farga, GSharp): mismos conceptos de componentes, estado y routing.',
+      'Arquitectura: Scubex (TFG) — diseñé la arquitectura completa: React + TypeScript, API REST en Spring Boot con PostgreSQL, OAuth 2.0, APIs externas (GBIF, Open-Meteo), despliegue en Vercel + Railway, 137 tests con +90% de cobertura.',
+      'Los 2 años "definiendo arquitecturas" NO los tengo en un rol formal de arquitecto. Ser honesto: mi experiencia en diseño de arquitectura viene del TFG y de decisiones técnicas en proyectos propios.',
+      'APIs REST e integraciones: API de Microsoft Planner en GSharp (Django), OAuth 2.0/GBIF/Open-Meteo en Scubex.',
+      'Adaptabilidad: en Click-IT pasé por Angular, Fastify, Django y .NET en pocos meses.',
+      'CMS, CA Service Desk Manager y Redis: no los tengo. Tratarlos como "valorable" y ser honesto.',
+      'Salario 26.000–30.000 € brutos/año: tenerlo en cuenta si preguntan expectativas.',
     ],
     adaptacionCV: [
-      'Título del CV cambiado a "Ingeniero de Software — Full Stack (React & Python/Django)".',
-      'Color de marca del CV en azul/morado Scalian (#5a2d82).',
-      'Resumen reescrito para abrir con ReactJS y Python/Django, REST APIs y experiencia de usuario.',
-      'Experiencia de Click-IT reordenada: GSharp (Django) primero, La Farga marcada como Fastify/Node.js.',
-      'Proyectos destacados reordenados: Todo Jardín (Django) → Scubex (React) → Orquesta Elegidos (React) → Portfolio 3D.',
-      'Stack técnico reordenado: Python y JavaScript primero; React y Django al inicio de frameworks; REST APIs y PostgreSQL al inicio de herramientas.',
-      'Proyectos universitarios filtrados: Truco Beasts (React), uvlhub (Flask/Docker), hackathones y Othello AI.',
+      'CV SIN MODIFICAR: se envió el CV base Full-Stack en español (curriculum_base_pdf/CV-Ivan-Fernandez_Limarquez_ES.pdf), sin adaptarlo a la oferta.',
     ],
     adaptacionCarta: [
-      'La oferta SÍ exige mínimo 3 años, así que la nota usa ese mismo número ("más de 3 años programando") apoyándose en proyectos universitarios, hackathones, freelance y Click-IT.',
-      'Se deja claro que la experiencia remunerada arranca en 2026 — no se oculta.',
-      'Se mencionan clientes reales con nombre: Click-IT (La Farga, Kam) y Orquesta Elegidos.',
+      'La oferta SÍ exige mínimo 3 años full-stack, así que la carta usa ese mismo número ("más de 3 años desarrollando full-stack") apoyándose en proyectos universitarios, hackathons y Click-IT.',
+      'Se mencionan clientes reales con nombre: Click-IT (La Farga, Kam).',
+      'Se dice explícitamente que no he trabajado con Vue.js ni Oracle, reconduciendo hacia React/Angular.',
+      'No se afirman los 2 años definiendo arquitecturas; se usa Scubex como ejemplo de diseño de arquitectura.',
+      'Se recalca residencia en Sevilla y disponibilidad presencial (requisito eliminatorio).',
+      'Carta resumida a petición del usuario; Click-IT descrito como "mi etapa" (mayo–noviembre 2026).',
     ],
     claimsExperiencia: [
-      'DICHO: "más de 3 años programando" (contando universidad + hackathones + freelance + Click-IT). Hay que poder desglosar esos años si lo preguntan.',
-      'DICHO: experiencia real con Django (GSharp y Todo Jardín) y con React (Scubex, Elegidos, portfolio).',
-      'NO DICHO: nada de Azure, Snowflake, dbt, Databricks ni sector científico/farma. No inventar en la entrevista.',
+      'DICHO: "más de 3 años desarrollando full-stack" (contando universidad + hackathons + Click-IT). Hay que poder desglosarlos si lo preguntan.',
+      'DICHO: Node.js (Fastify) y Angular en La Farga; refactor de código legacy y backend .NET en Kam; 4 años con Java/Spring Boot; APIs REST y SQL (PostgreSQL); arquitectura completa de Scubex.',
+      'NO DICHO: experiencia con Vue.js, Vuetify, Oracle, CMS, CA SDM ni Redis.',
+      'NO DICHO: 2 años en definición de arquitecturas en un rol formal.',
     ],
-    notas: 'El CV se generó desde CvModificables/cv-modificable_es.html y se exportó con tools/export-cv.mjs.',
+    notas: 'Oferta facilitada por el usuario. Se envió el CV base Full-Stack ES sin adaptar. Colores tomados de la web oficial (grupohasten.com): rojo #e63727 y gris #595959.',
   },
   {
-    id: 'korber-support',
-    titulo: 'Full Stack Developer / Application Support',
-    empresa: 'Körber Supply Chain Consulting',
-    modalidad: 'Remoto / híbrido · Guardias 24x7 rotativas',
-    ubicacion: 'España',
-    fechaEnvio: '',
+    id: 'schneider-trainee-firmware',
+    titulo: 'Schneider Trainee Program — Prácticas I+D Firmware (C/C++)',
+    empresa: 'Schneider Electric',
+    modalidad: 'Prácticas remuneradas 6 meses · Híbrido (hasta 2 días remoto) · 20-30 h/semana',
+    ubicacion: 'Sevilla, España',
+    fechaEnvio: '2026-11-18',
     estado: 'enviada',
-    color: '#0046ad',
+    color: '#3dcd58',
+    color2: '#009530',
     url: '',
     descripcion:
-      'Körber Supply Chain Consulting implementa y da soporte a software logístico para clientes nacionales e ' +
-      'internacionales, trabajando junto a SAP. El puesto está orientado a SOPORTE Y MANTENIMIENTO de aplicaciones ' +
-      'existentes (no desarrollo greenfield): análisis y resolución de incidencias, mejoras y change requests sobre ' +
-      'entornos de cliente ya montados, trabajo con bases de datos y guardias de soporte 24x7 rotativas. ' +
-      'Piden .NET, C#, Java, JavaScript, arquitecturas web 3-tier, Oracle/SQL Server e inglés fluido. ' +
-      'Perfil junior-mid bienvenido. Valorable JIRA, Azure DevOps, Git y SVN. ' +
-      'Condiciones: horario flexible, remoto/híbrido, mentoring, formación continua y jerarquías planas.',
+      'Schneider Trainee Program: prácticas remuneradas de 6 meses en el departamento de I+D de firmware, que ' +
+      'diseña y desarrolla soluciones de firmware de alta fiabilidad para los equipos de Schneider Electric con ' +
+      'metodologías Agile. Aprendizaje: desarrollo y mantenimiento de módulos de firmware en C/C++, unit tests con ' +
+      'frameworks de C/C++, automatización de desarrollo y validación, ciberseguridad aplicada al firmware y ' +
+      'resolución de problemas mediante pruebas. Piden estudiante de grado/máster (Electrónica, Informática, Teleco, ' +
+      'Embebidos, Robótica…), C y C++ sólidos para firmware y estándares de codificación, nociones de embebidos o ' +
+      'Linux, Git, inglés alto, 4-6 h/día por las mañanas (entrada 8-10h), convenio de prácticas de 6 meses e ' +
+      'incorporación en enero, febrero o marzo. Condiciones: 700-900 €/mes, un día libre al mes, hasta 2 días de ' +
+      'remoto, posibilidad de prórroga o contratación.',
     cv: {
-      nombre: 'Ivan-Fernandez-Limarquez-CV-Korber.pdf',
-      ruta: '../curriculum_mod_pdf/Ivan-Fernandez-Limarquez-CV-Korber.pdf',
-      fuente: '../CvModificables/cv-modificable_en.html',
+      nombre: 'CV-Ivan-Fernandez_Limarquez_ES.pdf',
+      ruta: '../curriculum_base_pdf/CV-Ivan-Fernandez_Limarquez_ES.pdf',
+      fuente: '../CVPlantillas/cv-template-fullstack.html',
+      idioma: 'Español',
+    },
+    carta: {
+      enviada: true,
+      texto:
+        'Mensaje enviado con la candidatura (el texto exacto no se guardó):\n\n' +
+        'Soy de Sevilla y acabo de terminar el Grado en Ingeniería del Software; me presento como recién graduado ' +
+        'o para realizar las prácticas mediante convenio.',
+    },
+    tecnologias: [
+      'C', 'C++', 'Firmware', 'Sistemas embebidos', 'Linux', 'Unit testing (C/C++)', 'Git',
+      'Automatización', 'Ciberseguridad', 'Agile', 'Inglés alto',
+    ],
+    puntosEntrevista: [
+      'Situación académica: graduado en junio de 2026. La oferta pide estudiante y convenio de prácticas — tener claro cómo se haría el convenio (p. ej. vía la Universidad de Sevilla para recién titulados, o matriculándome en un máster/título propio) o si aceptan recién graduados con otro tipo de contrato.',
+      'C/C++ y firmware: PUNTO DÉBIL principal, no aparece en mi CV. Ser honesto; reconducir hacia la base de ingeniería del software (Java, C#, Python) y ganas de aprender bajo/medio nivel. NO decir que lo domino.',
+      'Unit tests: 137 tests unitarios y +90% de cobertura en Scubex (JUnit); tests con Selenium y Locust en uvlhub. Encaja con la parte de testing y validación.',
+      'Automatización: GitHub Actions, CI/CD y despliegue continuo (GitHub Pages, Vercel, Railway); uvlhub dockerizado.',
+      'Linux: uso habitual con Docker y despliegues; no vender administración de sistemas ni desarrollo embebido.',
+      'Git y Agile/Scrum: uso diario en Click-IT y en proyectos en grupo (Truco Beasts entre seis personas, uvlhub).',
+      'Ciberseguridad: lo más cercano es OAuth 2.0 con Google en Scubex; no tengo experiencia en ciberseguridad de firmware.',
+      'Calidad y código legacy: refactorización y cuellos de botella en Kam (.NET/C#) en Click-IT.',
+      'Disponibilidad: Click-IT terminó en noviembre de 2026, así que puedo incorporarme en enero-marzo con horario de mañanas (4-6 h/día).',
+      'Inglés C1 acreditado (Instituto de Idiomas, Univ. de Sevilla) — cubre el "nivel alto" que piden.',
+    ],
+    adaptacionCV: [
+      'CV SIN MODIFICAR: se envió el CV base Full-Stack en español (curriculum_base_pdf/CV-Ivan-Fernandez_Limarquez_ES.pdf), sin adaptarlo a la oferta.',
+    ],
+    adaptacionCarta: [
+      'Mensaje corto con la candidatura: soy de Sevilla, acabo de terminar la carrera y me presento como recién graduado o para hacer las prácticas por convenio.',
+    ],
+    claimsExperiencia: [
+      'DICHO: residencia en Sevilla, recién graduado en Ingeniería del Software y disponibilidad como recién graduado o mediante convenio.',
+      'NO DICHO: experiencia con C/C++, firmware, sistemas embebidos ni ciberseguridad.',
+    ],
+    notas: 'Oferta facilitada por el usuario, sin URL (no la encuentra). Se envió con el CV base Full-Stack ES sin adaptar. Colores: verde de marca Schneider Electric (#3dcd58) y verde oscuro (#009530).',
+  },
+  {
+    id: 'schneider-trainee-gmo-delivery',
+    titulo: 'Schneider Trainee Program — Prácticas GMO Delivery (Smart Metering)',
+    empresa: 'Schneider Electric',
+    modalidad: 'Prácticas remuneradas 6 meses · Híbrido (hasta 2 días remoto) · 20-30 h/semana',
+    ubicacion: 'Sevilla, España',
+    fechaEnvio: '2026-11-18',
+    estado: 'enviada',
+    color: '#3dcd58',
+    color2: '#009530',
+    url: '',
+    descripcion:
+      'Schneider Trainee Program: prácticas remuneradas de 6 meses en GMO Delivery, el departamento que ejecuta ' +
+      'proyectos internacionales de Smart Metering (telegestión de contadores) para compañías eléctricas, desde la ' +
+      'definición de la solución hasta su validación, puesta en producción y soporte. Aprendizaje: arquitectura de ' +
+      'sistemas de Smart Metering, fases y herramientas de los proyectos, módulos de la solución GMO, preparación y ' +
+      'ejecución de pruebas, análisis de incidencias con soporte, documentación técnica, trabajo con clientes de ' +
+      'distintos países e iniciativas de IA y automatización. Piden estudiante de Informática, Teleco, Industrial o ' +
+      'similar, interés por el software, inglés B2 mínimo (se valora C1), trabajo en equipo, capacidad analítica, ' +
+      '4-6 h/día por las mañanas (entrada 8-10h), convenio de prácticas de 6 meses e incorporación en enero/febrero. ' +
+      'Se valoran programación, bases de datos, testing, análisis de datos o IA. Condiciones: 700-900 €/mes, un día ' +
+      'libre al mes, hasta 2 días de remoto, posibilidad de prórroga o contratación.',
+    cv: {
+      nombre: 'CV-Ivan-Fernandez_Limarquez_ES.pdf',
+      ruta: '../curriculum_base_pdf/CV-Ivan-Fernandez_Limarquez_ES.pdf',
+      fuente: '../CVPlantillas/cv-template-fullstack.html',
+      idioma: 'Español',
+    },
+    carta: {
+      enviada: true,
+      texto:
+        'Mensaje enviado con la candidatura (el texto exacto no se guardó):\n\n' +
+        'Soy de Sevilla y acabo de terminar el Grado en Ingeniería del Software; me presento como recién graduado ' +
+        'o para realizar las prácticas mediante convenio.',
+    },
+    tecnologias: [
+      'Smart Metering', 'Testing de software', 'Documentación técnica', 'Análisis de incidencias',
+      'Bases de datos', 'Análisis de datos', 'IA y automatización', 'Inglés B2 (C1 valorable)',
+    ],
+    puntosEntrevista: [
+      'Situación académica: graduado en junio de 2026. La oferta pide estudiante y convenio de prácticas — tener claro cómo se haría el convenio (p. ej. vía la Universidad de Sevilla para recién titulados, o matriculándome en un máster/título propio) o si aceptan recién graduados con otro tipo de contrato.',
+      'Inglés C1 acreditado (Instituto de Idiomas, Univ. de Sevilla): justo el nivel que valoran. Experiencia trabajando en remoto con una startup sueca (KnittedForYou).',
+      'Testing: 137 tests unitarios y +90% de cobertura en Scubex; Selenium y Locust en uvlhub. Encaja con preparar y ejecutar pruebas y documentar resultados.',
+      'Análisis de incidencias y soporte: trabajo sobre código legacy, cuellos de botella y refactorización en Kam (.NET/C#) en Click-IT.',
+      'Trabajo con clientes: Click-IT (La Farga, con trato directo con el cliente), KnittedForYou (requisitos con los fundadores) y Orquesta Elegidos (cliente real, desde cero).',
+      'Bases de datos: PostgreSQL en Scubex. Análisis de datos/IA: Othello AI (CNN en Keras entrenada con MCTS) y uso de IA como herramienta de desarrollo. Automatización: GitHub Actions y CI/CD.',
+      'Documentación: memoria del TFG (Scubex) y requisitos funcionales en asignaturas de ingeniería de requisitos.',
+      'Smart Metering / sector eléctrico: no tengo experiencia — ser honesto y mostrar interés.',
+      'Disponibilidad: Click-IT terminó en noviembre de 2026, así que puedo incorporarme en enero/febrero con horario de mañanas (4-6 h/día).',
+    ],
+    adaptacionCV: [
+      'CV SIN MODIFICAR: se envió el CV base Full-Stack en español (curriculum_base_pdf/CV-Ivan-Fernandez_Limarquez_ES.pdf), sin adaptarlo a la oferta.',
+    ],
+    adaptacionCarta: [
+      'Mismo mensaje que en la otra oferta de Schneider: soy de Sevilla, acabo de terminar la carrera y me presento como recién graduado o para hacer las prácticas por convenio.',
+    ],
+    claimsExperiencia: [
+      'DICHO: residencia en Sevilla, recién graduado en Ingeniería del Software y disponibilidad como recién graduado o mediante convenio.',
+      'NO DICHO: experiencia en Smart Metering ni en el sector eléctrico.',
+    ],
+    notas: 'Oferta facilitada por el usuario, sin URL (no la encuentra). Se envió con el CV base Full-Stack ES sin adaptar. Colores: verde de marca Schneider Electric (#3dcd58) y verde oscuro (#009530).',
+  },
+  {
+    id: 'dtn-digital-transformation-intern',
+    titulo: 'Digital Transformation Intern (Center of Improvements)',
+    empresa: 'DTN',
+    modalidad: 'Prácticas · Presencial (#LI-Onsite)',
+    ubicacion: 'Sevilla, España',
+    fechaEnvio: '2026-11-18',
+    estado: 'enviada',
+    color: '#1159af',
+    color2: '#f7630c',
+    url: '',
+    descripcion:
+      'DTN ofrece una plataforma de decisión operativa (Operational Decisioning Platform) basada en datos e IA para ' +
+      'agricultura, energía e inteligencia meteorológica. La persona en prácticas apoyará al Center of Improvements ' +
+      '(CoI) en la modernización de procesos de negocio: recoger información de los equipos de negocio, analizar y ' +
+      'documentar flujos de trabajo, diseñar soluciones (borradores, diagramas, notas técnicas), construir prototipos ' +
+      'y pruebas de concepto con ingenieros senior, mantener documentación y estándares, crear plantillas reutilizables ' +
+      'y materiales de formación, y aprender herramientas low-code. Áreas técnicas: automatización de procesos, ' +
+      'integración de sistemas y APIs, modelado de datos y reporting, low-code y arquitectura de soluciones, flujos con ' +
+      'IA y prompting, aplicaciones cloud y Microsoft Power Platform (Power Apps, Power Automate, Power BI) y Copilot ' +
+      'Studio. Requisitos: estudiante o recién graduado en Informática, Ingeniería o similar, buena comunicación en ' +
+      'inglés, mentalidad analítica y ganas de aprender. Se valoran cloud/SaaS, Power Platform, scripting, prompting y ' +
+      'entornos ágiles.',
+    cv: {
+      nombre: 'CV-Ivan-Fernandez_Limarquez_EN.pdf',
+      ruta: '../curriculum_base_pdf/CV-Ivan-Fernandez_Limarquez_EN.pdf',
+      fuente: '../CVPlantillas/cv-template-fullstack-en.html',
       idioma: 'Inglés',
     },
     carta: {
-      enviada: true,
-      texto:
-        'Nota de presentación integrada en el CV, en inglés (bloque "cover-note"):\n\n' +
-        '"Although my paid professional experience only started in 2026, I have kept coding continuously through ' +
-        'university projects highly focused on code and structured problem-solving, hackathons (CosmoCrush, Space25) ' +
-        'and freelance work (KnittedForYou), dealing with real clients at Click-IT and with Orquesta Elegidos, ' +
-        'building and maintaining applications and websites from scratch."',
-    },
-    tecnologias: [
-      '.NET / C#', 'Java (Spring Boot)', 'JavaScript', 'Arquitecturas web 3-tier',
-      'Oracle / SQL Server', 'SQL', 'Troubleshooting de incidencias', 'JIRA', 'Azure DevOps', 'Git', 'SVN',
-      'Inglés fluido',
-    ],
-    puntosEntrevista: [
-      'ARGUMENTO CENTRAL: el puesto es mantenimiento, no greenfield. Mi carta fuerte es Kam (mesoestetic) en Click-IT: primer backend en .NET/C#, refactorización de código legacy y resolución de cuellos de botella.',
-      'Java: Scubex está hecho con Spring Boot (+ PostgreSQL). Es mi proyecto Java más grande y por eso va el primero en el CV inglés.',
-      'JavaScript: La Farga (Angular + Fastify), Orquesta Elegidos (React + Vite), portfolio 3D. Cubre el frontend.',
-      'Arquitecturas 3-tier: explicar Scubex y Todo Jardín como presentación / lógica de negocio / base de datos. Es exactamente el patrón que piden.',
-      'Bases de datos: PostgreSQL con soltura (Scubex, Railway). Oracle y SQL Server NO los he tocado — decir que el SQL transfiere y que la sintaxis concreta se aprende rápido. No fingir.',
-      'Troubleshooting: enfatizar el trabajo sobre código legacy ajeno, leer código que no escribí y depurar bottlenecks. Es literalmente el día a día del puesto.',
-      'Clientes reales: La Farga (L\'Hospitalet), Kam (mesoestetic) y Orquesta Elegidos. El soporte es cara al cliente, así que insistir en la comunicación directa.',
-      'Herramientas: Git a diario y GitHub Actions. Azure DevOps y JIRA los he visto poco; SVN no. Presentarlos como "familiar, no experto".',
-      'GUARDIAS 24x7: preguntar cómo se organiza la rotación y mostrarse disponible; es un requisito que descarta gente, conviene dejarlo cerrado.',
-      'Inglés: la entrevista puede ser en inglés. C1 acreditado y CV entregado en inglés — coherente.',
-      'Testing: 137 tests unitarios y +90% cobertura en Scubex + JUnit. En mantenimiento, los tests de regresión son oro.',
-    ],
-    adaptacionCV: [
-      'CV entregado EN INGLÉS (plantilla cv-template-en.html) porque piden inglés fluido.',
-      'Título cambiado a "Software Engineer — Full-Stack Support & Maintenance (.NET, Java, JavaScript)".',
-      'Color de marca azul Körber (#0046ad).',
-      'Resumen reescrito alrededor de mantener, refactorizar y depurar aplicaciones + bases de datos SQL, y comunicación con cliente.',
-      'Click-IT reordenado: Kam (.NET/C#, legacy, bottlenecks) primero; luego La Farga (JavaScript/Fastify) y GSharp.',
-      'Proyectos destacados reordenados: Scubex (Java/Spring Boot) → Todo Jardín → Orquesta Elegidos. Todo Jardín redactado como app en producción "mantenida end to end".',
-      'Stack técnico reordenado: C#, Java y JavaScript primero; .NET y Spring Boot al inicio de frameworks; Git y PostgreSQL al inicio de herramientas.',
-    ],
-    adaptacionCarta: [
-      'La oferta NO exige un mínimo de años (acepta junior-mid), así que la nota NO menciona ninguna cifra de años — solo continuidad ("I have kept coding continuously").',
-      'Se cita explícitamente "building and maintaining applications" para alinear con el rol de soporte.',
-      'Clientes reales nombrados: Click-IT y Orquesta Elegidos.',
-    ],
-    claimsExperiencia: [
-      'DICHO: experiencia real en .NET/C# (Kam), Java/Spring Boot (Scubex) y JavaScript (varios). Todo verificable.',
-      'DICHO: trabajo sobre código legacy y resolución de cuellos de botella en Click-IT.',
-      'NO DICHO: ningún número de años. Si preguntan, la experiencia remunerada empieza en 2026.',
-      'NO DICHO: Oracle, SQL Server ni SVN. No afirmar que los conozco.',
-    ],
-    notas: 'El CV se generó desde CvModificables/cv-modificable_en.html y se exportó con tools/export-cv.mjs.',
-  },
-  {
-    id: 'nunegal-fullstack-java',
-    titulo: 'Full Stack Developer (React/Angular/Vue + Java)',
-    empresa: 'Nunegal',
-    modalidad: '100% Teletrabajo · Contrato indefinido',
-    ubicacion: 'España (100% remoto)',
-    fechaEnvio: '',
-    estado: 'enviada',
-    color: '#1b1a6e',
-    url: '',
-    descripcion:
-      'Nunegal busca un/a Full Stack Developer para un proyecto con impacto real: frontend con React, ' +
-      'Angular o Vue y backend en Java (Spring Boot), diseño y evolución de arquitecturas de software ' +
-      '(especialmente microservicios) y aplicaciones escalables y optimizadas. Se valora Cloud (AWS, ' +
-      'Azure o GCP), bases de datos SQL y NoSQL (PostgreSQL, MongoDB), diseño/consumo de APIs REST, ' +
-      'control de versiones (Git, GitHub, Azure DevOps) y CI/CD, además de conocimientos o exposición a ' +
-      'Inteligencia Artificial. Valorable: colas de mensajería (RabbitMQ, Kafka), modelado de datos o ' +
-      'proyectos de IA. Condiciones: empresa en constante crecimiento, contrato indefinido, 100% ' +
-      'teletrabajo, retribución flexible y formación continua.',
-    cv: {
-      nombre: 'Ivan-Fernandez-Limarquez-CV-Nunegal.pdf',
-      ruta: '../curriculum_mod_pdf/Ivan-Fernandez-Limarquez-CV-Nunegal.pdf',
-      fuente: '../CvModificables/cv-modificable_es.html',
-      idioma: 'Español',
-    },
-    carta: {
       enviada: false,
-      texto:
-        'Nota de presentación integrada en el propio CV (bloque "cover-note"):\n\n' +
-        '"Aunque mi experiencia laboral remunerada arrancó en 2026, llevo programando de forma continua ' +
-        'entre proyectos universitarios altamente enfocados al código y a la simulación de clientes ' +
-        'reales, hackathones (CosmoCrush, Space25) y prácticas/colaboraciones freelance (KnittedForYou), ' +
-        'además de mi puesto actual en Click-IT, donde trabajo en frontend con Angular y React, y en ' +
-        'proyectos propios con backend en Java/Spring Boot. Me interesa especialmente integrarme en un ' +
-        'proyecto con cultura de mejora continua y crecimiento profesional."',
+      texto: '',
     },
     tecnologias: [
-      'React', 'Angular', 'Java', 'Spring Boot', 'Microservicios', 'Cloud (AWS/Azure/GCP)',
-      'SQL · PostgreSQL', 'NoSQL · MongoDB', 'REST APIs', 'Git / GitHub / Azure DevOps', 'CI/CD',
-      'Inteligencia Artificial',
+      'Process automation', 'Low-code', 'Microsoft Power Platform', 'Power Apps', 'Power Automate', 'Power BI',
+      'Copilot Studio', 'APIs / systems integration', 'Data modeling & reporting', 'AI prompting', 'Cloud / SaaS',
+      'Agile', 'English',
     ],
     puntosEntrevista: [
-      'Frontend React: Scubex, Orquesta Elegidos, portfolio 3D, KnittedForYou y QuizzieD. Angular: La Farga y GSharp (Click-IT), con trato directo de cliente. Vue: PUNTO DÉBIL, sin experiencia — no venderlo como propio si preguntan.',
-      'Backend Java: Scubex (Spring Boot + PostgreSQL) y Truco Beasts (Spring Boot + React). Es el ancla de la parte Java/Spring Boot pedida.',
-      'Cloud (AWS/Azure/GCP): PUNTO DÉBIL, no tengo experiencia directa con ninguno de los tres. Reconducir hacia despliegues cloud reales (Vercel, Railway, PythonAnywhere) y disposición a aprender rápido. NO decir que domino ninguno.',
-      'Microservicios: no tengo experiencia formal con arquitecturas de microservicios; hablar de servicios REST independientes (GSharp, Scubex) como lo más cercano.',
-      'SQL/NoSQL: PostgreSQL con soltura (Scubex, Railway). MongoDB/NoSQL no lo he tocado — ser honesto si preguntan.',
-      'REST APIs: OAuth 2.0 con Google, GBIF y Open-Meteo en Scubex; integración de la API REST de Microsoft Planner en GSharp. Sé diseñar y consumir APIs, no solo consumirlas.',
-      'Git/GitHub: uso diario. Azure DevOps no lo he usado formalmente — presentarlo como "familiar con Git/GitHub, dispuesto a adaptarme a Azure DevOps".',
-      'CI/CD: GitHub Actions en varios proyectos y despliegue continuo en GitHub Pages (Orquesta Elegidos).',
-      'IA: Othello AI (CNN en Keras entrenada con MCTS self-play) como exposición real a proyectos de IA, además del uso habitual de IA como herramienta de desarrollo.',
-      'Colas de mensajería (RabbitMQ/Kafka): no tengo experiencia — ser honesto si preguntan. Modelado de datos: sí, vía el diseño del esquema relacional de Scubex en PostgreSQL.',
+      'Perfil: la oferta acepta recién graduados ("recently completed a degree"), así que encajo directamente (graduado en junio de 2026).',
+      'Ecosistema Microsoft: integré la API de Microsoft Planner en el CRM GSharp (Click-IT). Es lo más cercano a Power Platform / Copilot Studio — reconducir hacia ahí.',
+      'Power Platform, Power BI y Copilot Studio: PUNTO DÉBIL, no los he usado. Mostrar disposición a aprenderlos (la oferta dice "or willingness to learn").',
+      'Recogida de requisitos con negocio: KnittedForYou (requisitos con los fundadores), La Farga (trato directo con el cliente en Click-IT), Orquesta Elegidos (cliente real) y asignaturas de ingeniería de requisitos con clientes simulados.',
+      'Diagramas, borradores y prototipos: mockups y flujo de usuario completo en Figma para KnittedForYou; prototipos y aplicaciones completas (Scubex, Orquesta Elegidos).',
+      'APIs e integración: Microsoft Planner (GSharp), OAuth 2.0, GBIF y Open-Meteo (Scubex). Modelado de datos: PostgreSQL en Scubex.',
+      'Automatización y cloud: GitHub Actions, CI/CD, Docker, despliegues en Vercel, Railway y GitHub Pages.',
+      'IA y prompting: uso de IA como herramienta de desarrollo en mi día a día; Othello AI (CNN en Keras).',
+      'Agile: Scrum en Click-IT y en proyectos universitarios en grupo.',
+      'Inglés C1 acreditado — la entrevista probablemente sea en inglés.',
     ],
     adaptacionCV: [
-      'Título del CV cambiado a "Ingeniero de Software — Full Stack (React, Angular & Java)".',
-      'Color del CV a un azul índigo oscuro a juego con la imagen de marca aportada (acento en bordes/títulos/enlaces, fondo lavanda claro en los tags).',
-      'Resumen reescrito para abrir con React/Angular, Java/Spring Boot, REST APIs, PostgreSQL, despliegues cloud y Git/CI-CD en equipos ágiles.',
-      'Proyectos destacados reordenados: Scubex (título cambiado a Java, por combinar frontend+backend+SQL) primero, luego Orquesta Elegidos, Portfolio 3D y Todo Jardín (Django, al final por ser el menos relevante aquí).',
-      'Proyectos de universidad reordenados: Truco Beasts (Spring Boot + React) y Othello AI (IA) primero.',
-      'Stack técnico: Java primero en lenguajes; Spring Boot, React y Angular primero en frameworks; REST APIs, Git, GitHub Actions, CI/CD y PostgreSQL primero en herramientas.',
+      'CV SIN MODIFICAR: se envió el CV base Full-Stack en inglés (curriculum_base_pdf/CV-Ivan-Fernandez_Limarquez_EN.pdf), sin adaptarlo a la oferta.',
     ],
     adaptacionCarta: [
-      'La oferta no exige un mínimo de años de experiencia, así que la cover-note no menciona ninguna cifra.',
-      'Se deja claro que la experiencia remunerada arrancó en 2026 — no se oculta.',
-      'Se menciona el interés por la cultura de mejora continua y crecimiento profesional que describe la oferta.',
+      'Sin carta registrada para esta candidatura.',
     ],
     claimsExperiencia: [
-      'DICHO: experiencia real con React (varios proyectos), Angular (La Farga, GSharp) y Java/Spring Boot (Scubex, Truco Beasts).',
-      'DICHO: exposición a IA (Othello AI) y uso de IA como herramienta de desarrollo.',
-      'NO DICHO: ninguna experiencia con Vue, AWS/Azure/GCP, MongoDB, microservicios formales ni colas de mensajería (RabbitMQ/Kafka).',
+      'Solo lo que pone el CV base Full-Stack EN.',
+      'NO DICHO: experiencia con Power Platform, Power BI, Copilot Studio ni herramientas low-code.',
     ],
-    notas: 'El CV se generó desde CvModificables/cv-modificable_es.html y se exportó con utils/export-cv.mjs.',
-  },
-  {
-    id: 'paymarkfast-angular',
-    titulo: 'Desarrollador/a Frontend (Angular + JavaScript)',
-    empresa: 'PayMark Fast',
-    modalidad: 'Presencial en hub de innovación (Wayra)',
-    ubicacion: 'Madrid, España (Wayra, edificio Telefónica de Gran Vía)',
-    fechaEnvio: '',
-    estado: 'preparando',
-    color: '#e2701a',
-    url: '',
-    descripcion:
-      'PayMark Fast es una start-up tecnológica que usa Big Data e IoT para agilizar la experiencia en ' +
-      'tiendas y almacenes y mejorar la trazabilidad de productos. Está situada en Wayra, el hub de ' +
-      'innovación abierta del edificio de Telefónica de Gran Vía (Madrid). El puesto consiste en migrar ' +
-      'la actual aplicación web de PHP a Angular para ganar escalabilidad, trabajando en un equipo con un ' +
-      'programador senior y dos junior, y seguir desarrollando la web a medida que la empresa crece. ' +
-      'Requisitos: estudios informáticos, conocimientos avanzados de Angular y JavaScript, y conocimientos ' +
-      'básicos de HTML+CSS y Node.js.',
-    cv: {
-      nombre: 'Ivan-Fernandez-Limarquez-CV-PayMarkFast.pdf',
-      ruta: '../curriculum_mod_pdf/Ivan-Fernandez-Limarquez-CV-PayMarkFast.pdf',
-      fuente: '../CvModificables/cv-modificable_es.html',
-      idioma: 'Español',
-    },
-    carta: {
-      enviada: false,
-      texto:
-        'Nota de presentación integrada en el propio CV (bloque "cover-note"):\n\n' +
-        '"Aunque mi experiencia laboral remunerada arrancó en 2026, llevo programando de forma continua ' +
-        'entre proyectos universitarios altamente enfocados al código y a la simulación de clientes ' +
-        'reales, hackathones (CosmoCrush, Space25) y prácticas/colaboraciones freelance (KnittedForYou), ' +
-        'además de mi puesto actual en Click-IT, donde desarrollo en Angular y JavaScript y trabajo a ' +
-        'diario sobre código legacy, refactorizándolo y resolviendo cuellos de botella. Me motiva ' +
-        'especialmente crecer dentro de una start-up tecnológica y acompañar al producto a largo plazo. ' +
-        'Tengo disponibilidad para trasladarme según las condiciones, con preferencia por un esquema de ' +
-        'teletrabajo o híbrido cuando no sea necesario estar en la oficina."',
-    },
-    tecnologias: [
-      'Angular', 'JavaScript', 'TypeScript', 'HTML', 'CSS', 'Node.js', 'REST APIs', 'Git',
-    ],
-    puntosEntrevista: [
-      'Angular: La Farga y GSharp en Click-IT, los dos con frontend en Angular. Es el ancla principal de la oferta; preparar ejemplos concretos de componentes, servicios y estructura del proyecto.',
-      'JavaScript/TypeScript: uso diario en Click-IT (Angular en TypeScript) y en proyectos propios — Scubex, Orquesta Elegidos, el portfolio 3D y QuizzieD están en TypeScript; Truco Beasts, CosmoCrush y Space25 en JavaScript (verificado en los repos).',
-      'Node.js: La Farga usa Fastify sobre Node.js en el backend. Es conocimiento real, aunque la oferta solo pide nivel básico.',
-      'HTML+CSS: maquetación de todas mis interfaces web (Orquesta Elegidos del wireframe a producción, Scubex, portfolio 3D y las pantallas de KnittedForYou a partir de mis propios diseños en Figma).',
-      'Migración de PHP a Angular: PUNTO DÉBIL, no tengo experiencia con PHP. Reconducir hacia lo que sí he hecho: refactorización de código legacy y resolución de cuellos de botella en Kam (.NET/C#) y en GSharp (Django).',
-      'Escalabilidad/arquitectura de componentes: Scubex como SPA por componentes con estado centralizado (MobX) y 137 tests con +90% de cobertura; optimización de carga en el portfolio 3D (209 MB → 45 MB).',
-      'Trabajo en equipo con senior + juniors: experiencia en Click-IT y en proyectos universitarios en grupo (Truco Beasts, uvlhub) con Scrum y Git.',
-      'Big Data / IoT: no tengo experiencia con ninguno de los dos — ser honesto; el puesto es de frontend y mi aportación está ahí.',
-      'Ubicación: la empresa está en Madrid (Wayra, Gran Vía) y yo en Sevilla. Mensaje acordado: disponibilidad para trasladarme según condiciones, con preferencia por teletrabajo/híbrido.',
-    ],
-    adaptacionCV: [
-      'Título del CV cambiado a "Desarrollador Frontend — Angular & JavaScript".',
-      'Color del CV a la marca indicada: naranja (#e2701a, con #b5590b en textos/enlaces para contraste) como acento y azul oscuro (#0f2b4c) en titulares, borde de cabecera y títulos de sección; tags con fondo naranja claro (#fdeedf).',
-      'Resumen reescrito para abrir con frontend, Angular y todo el ecosistema JavaScript (TypeScript, Node.js/Fastify, React, Vite), HTML+CSS, REST APIs y refactorización de código legacy hacia componentes escalables.',
-      'Experiencia de Click-IT reordenada: La Farga (Angular + Node.js) primero, GSharp (Angular) segundo, el bullet de legacy/refactor subido al tercer puesto por la migración de PHP a Angular, y Kam al final.',
-      'KnittedForYou reenfocado a componentes JavaScript con HTML y CSS a partir de mis mockups.',
-      'Proyectos destacados reordenados: Scubex (TypeScript, SPA por componentes) → Orquesta Elegidos (HTML+CSS y TypeScript, cliente real) → Portfolio 3D (TypeScript y optimización) → Todo Jardín (Django, al final, pero destacando catálogo y gestión de productos/pedidos por afinidad con tiendas y almacenes).',
-      'Proyectos de universidad: QuizzieD (JavaScript/TypeScript) y Truco Beasts (interfaz y animaciones) primero, luego Space25/CosmoCrush y uvlhub; se quitó Othello AI (Keras, poco relevante).',
-      'Stack técnico: JavaScript, TypeScript, HTML y CSS primero en lenguajes; Angular, Node.js y Fastify primero en frameworks; Git y REST APIs primero en herramientas; se quitó el tag de Keras.',
-    ],
-    adaptacionCarta: [
-      'La oferta no exige un mínimo de años de experiencia, así que la cover-note no menciona ninguna cifra.',
-      'Se deja claro que la experiencia remunerada arrancó en 2026 — no se oculta.',
-      'Se menciona el interés por crecer dentro de una start-up tecnológica y acompañar al producto a largo plazo, tal y como plantea la oferta.',
-      'Se incluye la disponibilidad para trasladarse según condiciones, con preferencia por teletrabajo/híbrido cuando no sea necesario ir a la oficina.',
-    ],
-    claimsExperiencia: [
-      'DICHO: experiencia real con Angular (La Farga y GSharp en Click-IT), JavaScript/TypeScript, HTML+CSS y Node.js vía Fastify.',
-      'DICHO: refactorización y trabajo sobre código legacy y cuellos de botella.',
-      'NO DICHO: ninguna experiencia con PHP, Big Data ni IoT.',
-      'NO DICHO: ningún número de años de experiencia.',
-    ],
-    notas: 'El CV se generó desde CvModificables/cv-modificable_es.html y se exportó con utils/export-cv.mjs.',
+    notas: 'Oferta facilitada por el usuario, sin URL. Se envió con el CV base Full-Stack EN sin adaptar. Colores tomados de la paleta de dtn.com: azul #1159af y naranja #f7630c.',
   },
 ];

@@ -17,7 +17,7 @@ Graduado en Ingeniería del Software apasionado por crear software limpio y fác
 ## Experiencia
 
 ### Click-IT — Desarrollador
-Barcelona · Mayo – Actualidad · https://click-it.es/
+Barcelona · Mayo 2026 – Noviembre 2026 · https://click-it.es/
 
 - **La Farga:** gestión de vehículos y aparcamiento para L'Hospitalet (Angular + Fastify), trato directo con cliente.
 - **GSharp:** CRM interno; profundicé en Django e integré la API de Microsoft Planner.
